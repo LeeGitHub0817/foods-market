@@ -15,9 +15,10 @@ module.exports = {
       mediaQuery: false
     },
     "cssnano": {
-      preset: "advanced",
-      autoprefixer: false,
-      "postcss-zindex": false
+      "cssnano-preset-advanced": {
+        zindex: false, //这个必须设置false，不然你的z-index的值跟你设置的不一样
+        autoprefixer: false
+      }
     }
   }
 }
