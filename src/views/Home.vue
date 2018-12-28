@@ -15,9 +15,9 @@
     <div class="h-banner-container">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img class="img-show" src="../assets/img/index/1.jpg" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="../assets/img/index/2.jpg" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="../assets/img/index/3.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="static/index/1.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="static/index/2.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="static/index/3.jpg" alt="轮播图"></div>
         </div>
         <!--分页器-->
         <div class="swiper-pagination"></div>
@@ -67,6 +67,37 @@
         </div>
       </div>
     </div>
+    <!--精品推荐-->
+    <div class="h-good-container">
+      <div class="good-head">
+        <span class="hot-icon">HOT</span>
+        <span class="good-title">精品推荐</span>
+        <div class="swiper-pagination-good right-float">right</div>
+      </div>
+      <div class="product-box">
+        <!--左边部分-->
+        <div class="product-box-left">
+          <div class="product-left-img">
+            <img class="product-img-show" src="static/index/5.png" alt="精品产品">
+          </div>
+          <div class="product-left-title">散装精品三文鱼</div>
+          <div class="product-left-price">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">42.00</span>
+            <span class="unit-symbol">/斤</span>
+          </div>
+        </div>
+        <!--右边部分-->
+        <div class="product-box-right">
+          <div class="product-right-up">
+
+          </div>
+          <div class="product-right-down">
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -102,20 +133,19 @@ export default {
           disableOnInteraction: false
         },
         loop: false,
-        pagination: {
-          el: ".swiper-pagination"
-        }
     });
   }
 }
 </script>
 
+<style lang="scss" src="../assets/sass/test.scss"></style>
 <style lang="scss">
   /*定义颜色,字体等变量*/
   $bg-white: #fff;
 
   $main-green: #1dce7e;
   $main-gray: #f2f2f2;
+  $main-red: #FF1810;
 
   $text-none: 0;
   $text-normal: 28px;
@@ -267,7 +297,14 @@ export default {
   }
 
 
-
+.test{
+  a{
+    color: #ff1f1f;
+    &:hover{
+      color: #00b1ff;
+    }
+  } 
+}
 
 
 
