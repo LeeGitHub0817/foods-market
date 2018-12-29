@@ -72,28 +72,183 @@
       <div class="good-head">
         <span class="hot-icon">HOT</span>
         <span class="good-title">精品推荐</span>
-        <div class="swiper-pagination-good right-float">right</div>
+        <div class="swiper-pagination-good-con right-float">
+          <div class="swiper-pagination-good"></div>
+        </div>
       </div>
-      <div class="product-box">
-        <!--左边部分-->
-        <div class="product-box-left">
-          <div class="product-left-img">
-            <img class="product-img-show" src="static/index/5.png" alt="精品产品">
+      <div class="swiper-container-good">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-box">
+              <!--左边部分-->
+              <div class="product-box-left">
+                <div class="product-left-img">
+                  <img class="product-img-show" src="static/index/5.png" alt="精品产品">
+                </div>
+                <div class="product-left-title">散装精品三文鱼</div>
+                <div class="product-left-price">
+                  <span class="currency-symbol">￥</span>
+                  <span class="price-number">42.00</span>
+                  <span class="unit-symbol">/斤</span>
+                </div>
+              </div>
+              <!--右边部分-->
+              <div class="product-box-right">
+                <div class="product-right-part">
+                  <div class="product-right-img">
+                    <img class="product-img-show" src="static/index/4.png" alt="精品产品">
+                  </div>
+                  <div class="product-right-info">
+                    <div class="product-right-title">三点蟹鲜活4-12头三点蟹鲜活4-12头</div>
+                    <div class="product-right-price">
+                      <span class="currency-symbol">￥</span>
+                      <span class="price-number">27.00</span>
+                      <span class="unit-symbol">/盒</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-right-part">
+                  <div class="product-right-img">
+                    <img class="product-img-show" src="static/index/6.png" alt="精品产品">
+                  </div>
+                  <div class="product-right-info">
+                    <div class="product-right-title">白虾</div>
+                    <div class="product-right-price">
+                      <span class="currency-symbol">￥</span>
+                      <span class="price-number">34.90</span>
+                      <span class="unit-symbol">/斤</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="product-left-title">散装精品三文鱼</div>
-          <div class="product-left-price">
+          <div class="swiper-slide">
+            <div class="product-box">
+              <!--左边部分-->
+              <div class="product-box-left">
+                <div class="product-left-img">
+                  <img class="product-img-show" src="static/index/5.png" alt="精品产品">
+                </div>
+                <div class="product-left-title">散装精品三文鱼</div>
+                <div class="product-left-price">
+                  <span class="currency-symbol">￥</span>
+                  <span class="price-number">42.00</span>
+                  <span class="unit-symbol">/斤</span>
+                </div>
+              </div>
+              <!--右边部分-->
+              <div class="product-box-right">
+                <div class="product-right-part">
+                  <div class="product-right-img">
+                    <img class="product-img-show" src="static/index/4.png" alt="精品产品">
+                  </div>
+                  <div class="product-right-info">
+                    <div class="product-right-title">三点蟹鲜活4-12头三点蟹鲜活4-12头</div>
+                    <div class="product-right-price">
+                      <span class="currency-symbol">￥</span>
+                      <span class="price-number">27.00</span>
+                      <span class="unit-symbol">/盒</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-right-part">
+                  <div class="product-right-img">
+                    <img class="product-img-show" src="static/index/6.png" alt="精品产品">
+                  </div>
+                  <div class="product-right-info">
+                    <div class="product-right-title">白虾</div>
+                    <div class="product-right-price">
+                      <span class="currency-symbol">￥</span>
+                      <span class="price-number">34.90</span>
+                      <span class="unit-symbol">/斤</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--分割线-->
+    <div class="h-splitline"></div>
+    <!--新品上市-->
+    <div class="h-newgood-container">
+      <div class="newgood-head">新品上市</div>
+      <div class="newgood-box">
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/7.png" alt="新品上市">
+          </div>
+          <div class="title-con">法式鲜鹅肝（生鲜菜牌）法式鲜鹅肝（生鲜菜牌）</div>
+          <div class="price-con">
             <span class="currency-symbol">￥</span>
-            <span class="price-number">42.00</span>
+            <span class="price-number">149.98</span>
             <span class="unit-symbol">/斤</span>
           </div>
         </div>
-        <!--右边部分-->
-        <div class="product-box-right">
-          <div class="product-right-up">
-
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/8.png" alt="新品上市">
           </div>
-          <div class="product-right-down">
-
+          <div class="title-con">芝士年糕</div>
+          <div class="price-con">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">27.98</span>
+            <span class="unit-symbol">/斤</span>
+          </div>
+        </div>
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/9.png" alt="新品上市">
+          </div>
+          <div class="title-con">章鱼足（八爪足）</div>
+          <div class="price-con">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">49.98</span>
+            <span class="unit-symbol">/斤</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--分割线-->
+    <div class="h-splitline"></div>
+    <!--热销商品-->
+    <div class="h-newgood-container">
+      <div class="newgood-head">热销商品</div>
+      <div class="newgood-box">
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/7.png" alt="新品上市">
+          </div>
+          <div class="title-con">法式鲜鹅肝（生鲜菜牌）法式鲜鹅肝（生鲜菜牌）</div>
+          <div class="price-con">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">149.98</span>
+            <span class="unit-symbol">/斤</span>
+          </div>
+        </div>
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/8.png" alt="新品上市">
+          </div>
+          <div class="title-con">芝士年糕</div>
+          <div class="price-con">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">27.98</span>
+            <span class="unit-symbol">/斤</span>
+          </div>
+        </div>
+        <div class="newgood-part">
+          <div class="img-con">
+            <img class="img-show" src="static/index/9.png" alt="新品上市">
+          </div>
+          <div class="title-con">章鱼足（八爪足）</div>
+          <div class="price-con">
+            <span class="currency-symbol">￥</span>
+            <span class="price-number">49.98</span>
+            <span class="unit-symbol">/斤</span>
           </div>
         </div>
       </div>
@@ -113,6 +268,7 @@ export default {
     }
   },
   mounted: function(){
+    //轮播图
     var homeBanner = new Swiper(".swiper-container", {
       direction: "horizontal",
         autoplay: {
@@ -125,6 +281,7 @@ export default {
           el: ".swiper-pagination"
         }
     });
+    //新闻轮播
     var newBanner = new Swiper(".swiper-container-news", {
       direction: "vertical",
         autoplay: {
@@ -134,17 +291,42 @@ export default {
         },
         loop: false,
     });
+    //精品推荐滑动轮播
+    var goodBanner = new Swiper(".swiper-container-good", {
+      direction: "horizontal",
+      autoplay: {
+        delay: 10000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination-good"
+      }
+    })
   }
 }
 </script>
 
-<style lang="scss" src="../assets/sass/test.scss"></style>
 <style lang="scss">
+  /***1px解决方案***/
+  @svg 1px-border{
+    width: 4px;
+    height: 4px;
+    @rect {
+      fill: transparent;
+      width: 100%;
+      height: 100%;
+      stroke-width: 25%;
+      stroke: var(--color, black);
+    }
+  }
   /*定义颜色,字体等变量*/
   $bg-white: #fff;
 
   $main-green: #1dce7e;
   $main-gray: #f2f2f2;
+  $main-text-gray: #999;
   $main-red: #FF1810;
 
   $text-none: 0;
@@ -153,6 +335,7 @@ export default {
   $text-small: 26px;
   $text-middle: 30px;
   $text-big: 32px;
+
   /***搜索框***/
   .h-search-container{
     position: fixed;
@@ -187,7 +370,7 @@ export default {
       display: inline-block;
       vertical-align: middle;
       font-size: $text-none;
-      margin-left: 32px;
+      margin-left: 28px;
       .msg-show-img{
         width: 44px;
         height: 44px;
@@ -295,35 +478,213 @@ export default {
       }
     }
   }
-
-
-.test{
-  a{
-    color: #ff1f1f;
-    &:hover{
-      color: #00b1ff;
+  /***精品推荐***/
+  .h-good-container{
+    .good-head{
+      margin: 48px 32px 24px 32px;
+      .hot-icon{
+        display: inline-block;
+        vertical-align: middle;
+        height: 32px;
+        padding: 0 6px;
+        margin-right: 8px;
+        border-radius: 8px;
+        font-size: $text-xsmall;
+        line-height: 32px;
+        background-color: $main-red;
+        color: #fff;
+      }
+      .good-title{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: $text-big;
+        font-weight:600;
+        color:rgba(51,51,51,1);
+        background:linear-gradient(90deg, rgba(255,59,62,1) 0%, rgba(255,190,79,1) 100%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      }
+      .swiper-pagination-good-con{
+        .swiper-pagination-bullet{
+          width: 24px;
+          height: 8px;
+          margin-left: 8px;
+          display: inline-block;
+          border-radius: 4px;
+          background: #f2f2f2;
+          opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+          background-color: $main-green;
+          opacity: 1;
+        }
+      }
     }
-  } 
-}
-
-
-
-  @svg 1px-border{
-    width: 4px;
-    height: 4px;
-    @rect {
-      fill: transparent;
-      width: 100%;
-      height: 100%;
-      stroke-width: 25%;
-      stroke: var(--color, black);
+    .product-box{
+      width: 750px;
+      min-height: 437px;
+      border-top: 1px solid transparent;
+      border-image: svg(1px-border param(--color $main-gray)) 1 stretch;
+      font-size: $text-none;
+      .product-box-left{
+        // width: 40%;
+        min-height: 437px;
+        display: inline-block;
+        border-right: 1px solid transparent;
+        border-image: svg(1px-border param(--color $main-gray)) 1 stretch;
+        .product-left-img{
+          width: 280px;
+          height: 280px;
+          padding: 16px;
+          font-size: $text-none;
+          .product-img-show{
+            width: 280px;
+            height: 280px;
+          }
+        }
+        .product-left-title{
+          text-align: left;
+          font-weight: bold;
+          font-size: $text-middle;
+          padding: 0 32px;
+          margin-top: 24px;
+          box-sizing: border-box;
+        }
+        .product-left-price{
+          text-align: left;
+          padding: 0 32px;
+          margin-top: 16px;
+          margin-bottom: 32px;
+          box-sizing: border-box;
+          .currency-symbol{
+            font-size: $text-xsmall;
+            color: $main-red;
+            font-weight: bold;
+          }
+          .price-number{
+            color: $main-red;
+            font-weight: bold;
+          }
+          .unit-symbol{
+            color: $main-text-gray;
+            font-size: $text-xsmall;
+          }
+        }
+      }
+      .product-box-right{
+        display: inline-block;
+        width: 58%;
+        .product-right-part{
+          font-size: $text-none;
+          &:not(:last-child){
+            border-bottom: 1px solid transparent;
+            border-image: svg(1px-border param(--color $main-gray)) 1 stretch;
+          }
+          .product-right-img{
+            display: inline-block;
+            width: 182px;
+            height: 182px;
+            padding: 16px;
+            .product-img-show{
+              width: 182px;
+            height: 182px;
+            }
+          }
+          .product-right-info{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            .product-right-title{
+              font-weight: bold;
+              font-size: $text-middle;
+              margin-top: 40px;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              padding-right: 16px;
+              box-sizing: border-box;
+            }
+            .product-right-price{
+              margin-top: 16px;
+              .currency-symbol{
+                font-size: $text-xsmall;
+                color: $main-red;
+                font-weight: bold;
+              }
+              .price-number{
+                color: $main-red;
+                font-weight: bold;
+              }
+              .unit-symbol{
+                color: $main-text-gray;
+                font-size: $text-xsmall;
+              }
+            }
+          }
+        }
+      }
     }
   }
-  .test-con{
-    background-color: #eee;
-    border: 1px solid transparent;
-    border-image: svg(1px-border param(--color #00b1ff)) 1 stretch;
-    width: 200px;
-    height: 500px;
+  /***分割线***/
+  .h-splitline{
+    height: 10px;
+    background-color: $main-gray;
+  }
+  /***新品上市***/
+  .h-newgood-container{
+    .newgood-head{
+      padding: 32px;
+      font-size: $text-big;
+      font-weight: bold;
+    }
+    .newgood-box{
+      padding: 0 32px;
+      font-size: $text-none;
+      .newgood-part{
+        display: inline-block;
+        width: 208px;
+        &:not(:last-child){
+          margin-right: 31px;
+        }
+        .img-con{
+          width: 208px;
+          height: 208px;
+          .img-show{
+            width: 208px;
+            height: 208px;
+          }
+        }
+        .title-con{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-top: 10px;
+          width: 100%;
+          min-height: 70px;
+        }
+        .price-con{
+          margin-top: 10px;
+          margin-bottom: 32px;
+          .currency-symbol{
+            font-size: $text-xsmall;
+            color: $main-red;
+            font-weight: bold;
+          }
+          .price-number{
+            color: $main-red;
+            font-weight: bold;
+          }
+          .unit-symbol{
+            color: $main-text-gray;
+            font-size: $text-xsmall;
+          }
+        }
+      }
+    }
   }
 </style>
