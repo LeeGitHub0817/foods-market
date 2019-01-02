@@ -253,6 +253,10 @@
         </div>
       </div>
     </div>
+    <!--占位避免遮挡-->
+    <div style="height: 13.067vw"></div>
+    <!--底部导航按钮-->
+    <foot-part></foot-part>
   </div>
 </template>
 
@@ -480,6 +484,11 @@ export default {
   }
   /***精品推荐***/
   .h-good-container{
+    width: 750px;
+    min-height: 437px;
+    .swiper-container-good{
+      overflow: hidden;
+    }
     .good-head{
       margin: 48px 32px 24px 32px;
       .hot-icon{
