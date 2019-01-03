@@ -1,6 +1,6 @@
 <template>
   <div class="footer-container clear-flow">
-    <div class="menu clear-float" @click="handleClickIcon($event)">
+    <div class="menu clear-float">
       <router-link :class="{'icon-link index left-float': true, active: $route.path === '/'}" to="/">
         <i class="comm-icon icon-index"></i>
         <div class="name">首页</div>

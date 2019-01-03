@@ -1,0 +1,146 @@
+.l-welcome{
+	padding: 64px 0;
+  text-align: center;
+  .welcome-title{
+    display: inline-block;
+    font-weight: 600;
+    color: rgba(51,51,51,1);
+    line-height: 110px;
+    background: linear-gradient(90deg, rgba(29,206,126,1) 0%, rgba(120,243,137,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+  }
+}
+.l-form{
+  .l-common{
+    margin: 0 55px;
+    &:not(:first-child){
+      margin-top: 64px;
+    }
+    .common{
+      width: 100%;
+      height: 88px;
+      input{
+        width: 100%;
+        height: 88px;
+        font-size: 30px;
+        border-radius: 44px;
+        background-color: #F6F6F6;
+        outline: 0;
+        border: 0;
+      }
+    }
+    .phone-con, .realname-con, .code-con, .invitecode-con, .account-con, .upwd-con{
+      input{
+        box-sizing: border-box;
+        padding-left: 40px;
+      }
+    }
+    .loginbtn-con{
+      input{
+        background-color: #1DCE7E;
+	      color: #fff;
+        pointer-events: auto;
+        font-size: 32px;
+      }
+    }
+    .regbtn-con{
+      input{
+        background-color: #e2e2e2;
+        color: #fff;
+        pointer-events: none;
+      }
+      &.active{
+        input{
+          background-color: #1DCE7E;
+          color: #fff;
+          pointer-events: auto;
+        }
+      }
+    }
+    
+  }
+  .l-phone{
+    margin-top: 64px;
+  }
+  .l-protocol{
+    .protocol-con{ 
+      height: auto;
+      input{
+        width: auto;
+        height: auto;
+      }
+      .check-btn{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 36px;
+        background-image: url("../img/user/check-no.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 36px 36px;
+        margin-right: 15px;
+        &.selected{
+          background-image: url("../img/user/check-ok.png");
+          background-size: 36px 36px;
+        }
+      }
+      .part-one{
+        vertical-align: middle;
+        font-size: 30px;
+      }
+      .part-two{
+        vertical-align: middle;
+        border-bottom: 1px solid #1DCE7E;
+        a{
+          color: #1DCE7E;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .link-con{
+    text-align: center;
+    span{
+      vertical-align: middle;
+    }
+    a{
+      color: #1DCE7E;
+      font-size: 30px;
+    }
+    .l-line{
+      display: inline-block;
+      border-left: 1px solid #e9e9e9;
+      height: 24px;
+      width: 1px;
+      margin: 0 30px;
+    }
+    .l-reg{
+      line-height: 30px;
+    }
+    .l-ret{
+      line-height: 30px;
+    }
+  }
+  .l-code{
+    .code-con{
+      position: relative;
+      .getcode-btn{
+        position: absolute;
+        height: 88px;
+        top: 0;
+        right: 40px;
+        font-size: 30px;
+        line-height: 88px;
+      }
+      .getcode{
+        color: #1DCE7E;
+      }
+      .countdown{
+        color: #999;
+        pointer-events: none;
+      }
+    }
+  }
+}

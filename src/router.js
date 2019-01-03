@@ -7,6 +7,9 @@ import Types from "./views/Types.vue";
 import CommonList from "./views/CommonList.vue";
 import Cart from "./views/Cart.vue";
 import UserCenter from "./views/UserCenter.vue";
+import Login from "./views/Login";
+import Register from "./views/Register";
+import Retrieve from "./views/Retrieve";
 
 Vue.use(Router)
 
@@ -40,6 +43,21 @@ export default new Router({
       path: '/usercenter',
       name: 'usercenter',
       component: UserCenter
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/retrieve',
+      name: 'retrieve',
+      component: Retrieve
     }
   ]
 })
