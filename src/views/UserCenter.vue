@@ -47,14 +47,14 @@
     <div class="u-order">
       <div class="order-nothing"></div>
       <div class="order-btn">
-        <span data-btn="1" class="btn-common common-color ordinary-btn active">普通订单</span>
-        <span data-btn="2" class="btn-common common-color bill-btn">账期订单</span>
+        <span data-btn="1" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color ordinary-btn': true, active: switchOption === false}">普通订单</span>
+        <span data-btn="2" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color bill-btn': true, active: switchOption === true}">账期订单</span>
         <a href="">
           <span class="btn-common all-list right-float">全部订单</span>
         </a>
       </div>
       <!--普通订单-->
-      <div data-menu="1" class="order-btn-detail">
+      <div v-if="switchOption === false" data-menu="1" class="order-btn-detail">
         <div class="btn-detail-common">
           <a href="">
             <div class="img-con">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <!--账期订单-->
-      <div data-menu="2" class="order-btn-detail" style="display: none;">
+      <div v-else data-menu="2" class="order-btn-detail">
         <div class="btn-detail-common">
           <a href="">
             <div class="img-con">
@@ -206,6 +206,16 @@
 
 <script>
 export default {
+  data: function(){
+    return {
+      switchOption: false
+    }
+  },
+  methods: {
+    switchOptionFunc: function(){
+      this.switchOption = !this.switchOption;
+    }
+  }
   
 }
 </script>

@@ -7,7 +7,7 @@
 <style lang="scss">
   /***公共通用样式***/
   body{
-    font-family: 'Helvetica Neue', "Microsoft YaHei", 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased; /*去除锯齿*/
     -moz-osx-font-smoothing: grayscale; 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*移动端手指触摸是反馈的背景颜色，此处设置无*/
