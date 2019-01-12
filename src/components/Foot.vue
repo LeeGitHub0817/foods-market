@@ -11,7 +11,7 @@
       </router-link>
       <router-link :class="{'icon-link list comm left-float': true, active: $route.path === '/commonlist'}" to="/commonlist">
         <i class="comm-icon icon-list"></i>
-        <div class="name">常用清单</div>
+        <div class="name">常购清单</div>
       </router-link>
       <router-link :class="{'icon-link cart comm left-float': true, active: $route.path === '/cart'}" to="/cart">
         <i class="comm-icon icon-cart"></i>

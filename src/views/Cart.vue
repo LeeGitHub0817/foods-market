@@ -63,11 +63,156 @@
               </div>
             </div>
           </div>
+          <div class="cart-goods-item">
+            <div class="check-part">
+              <i class="check-icon selected"></i>
+            </div>
+            <div class="goods-part">
+              <div class="goods-img-box">
+                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
+              </div>
+              <div class="goods-detail-box">
+                <div class="goods-title-box">超级美味八爪鱼</div>
+                <div class="goods-param-box">电风扇房价快速</div>
+                <div class="goods-price-buy-box">
+                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
+                  <div class="buy-btn-box">
+                    <span class="reduce-btn btn-common"></span>
+                    <input class="input-content" type="text" value="1">
+                    <span class="add-btn btn-common"></span>
+                  </div>
+                </div>
+                <div class="goods-option">
+                  <span class="common-buy common-btn">移入常购</span>
+                  <span class="delete-btn common-btn">删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-goods-item">
+            <div class="check-part">
+              <i class="check-icon selected"></i>
+            </div>
+            <div class="goods-part">
+              <div class="goods-img-box">
+                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
+              </div>
+              <div class="goods-detail-box">
+                <div class="goods-title-box">超级美味八爪鱼</div>
+                <div class="goods-param-box">电风扇房价快速</div>
+                <div class="goods-price-buy-box">
+                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
+                  <div class="buy-btn-box">
+                    <span class="reduce-btn btn-common"></span>
+                    <input class="input-content" type="text" value="1">
+                    <span class="add-btn btn-common"></span>
+                  </div>
+                </div>
+                <div class="goods-option">
+                  <span class="common-buy common-btn">移入常购</span>
+                  <span class="delete-btn common-btn">删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-goods-item">
+            <div class="check-part">
+              <i class="check-icon selected"></i>
+            </div>
+            <div class="goods-part">
+              <div class="goods-img-box">
+                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
+              </div>
+              <div class="goods-detail-box">
+                <div class="goods-title-box">超级美味八爪鱼</div>
+                <div class="goods-param-box">电风扇房价快速</div>
+                <div class="goods-price-buy-box">
+                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
+                  <div class="buy-btn-box">
+                    <span class="reduce-btn btn-common"></span>
+                    <input class="input-content" type="text" value="1">
+                    <span class="add-btn btn-common"></span>
+                  </div>
+                </div>
+                <div class="goods-option">
+                  <span class="common-buy common-btn">移入常购</span>
+                  <span class="delete-btn common-btn">删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-goods-item">
+            <div class="check-part">
+              <i class="check-icon selected"></i>
+            </div>
+            <div class="goods-part">
+              <div class="goods-img-box">
+                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
+              </div>
+              <div class="goods-detail-box">
+                <div class="goods-title-box">超级美味八爪鱼</div>
+                <div class="goods-param-box">电风扇房价快速</div>
+                <div class="goods-price-buy-box">
+                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
+                  <div class="buy-btn-box">
+                    <span class="reduce-btn btn-common"></span>
+                    <input class="input-content" type="text" value="1">
+                    <span class="add-btn btn-common"></span>
+                  </div>
+                </div>
+                <div class="goods-option">
+                  <span class="common-buy common-btn">移入常购</span>
+                  <span class="delete-btn common-btn">删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-goods-item">
+            <div class="check-part">
+              <i class="check-icon selected"></i>
+            </div>
+            <div class="goods-part">
+              <div class="goods-img-box">
+                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
+              </div>
+              <div class="goods-detail-box">
+                <div class="goods-title-box">超级美味八爪鱼</div>
+                <div class="goods-param-box">电风扇房价快速</div>
+                <div class="goods-price-buy-box">
+                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
+                  <div class="buy-btn-box">
+                    <span class="reduce-btn btn-common"></span>
+                    <input class="input-content" type="text" value="1">
+                    <span class="add-btn btn-common"></span>
+                  </div>
+                </div>
+                <div class="goods-option">
+                  <span class="common-buy common-btn">移入常购</span>
+                  <span class="delete-btn common-btn">删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <footer class="cart-done">
+        <div class="count-part">
+          <div class="checkall-container">
+            <i class="check-all-icon selected"></i>
+            <span class="text">全选</span>
+          </div>
+          <p class="total-price-container">
+            <span class="title">合计:</span>
+            <span class="total-price">￥789.15</span>
+          </p>
+        </div>
+        <div class="submit-part">
+          <span class="submit-text">去结算（9999）</span>
+        </div>
+      </footer>
+      <!--占位空白，避免底部遮挡内容-->
+      <div class="nothing"></div>
     </div>
-
-    
     <foot-part></foot-part>
   </div>
 </template>
@@ -150,6 +295,9 @@ export default {
         .cart-goods-item{
           font-size: 0;
           margin-bottom: 25px;
+          &:last-child .goods-part{
+            border-bottom: none;
+          }
           .check-part{
             display: inline-block;
             vertical-align: middle;
@@ -283,6 +431,63 @@ export default {
           }
         }
       } 
+    }
+    .cart-done{
+      position: fixed;
+      width: 100%;
+      height: 98px;
+      line-height: 98px;
+      left: 0;
+      bottom: 98px;
+      font-size: 0;
+      box-shadow: 0 -3px 13px 3px #f2f2f2;
+      background-color: #fff;
+      .count-part{
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        box-sizing: border-box;
+        padding-left: 32px;
+        .checkall-container{
+          display: inline-block;
+          vertical-align: middle;
+          .check-all-icon{
+            display: inline-block;
+            vertical-align: middle;
+            width: 36px;
+            height: 36px;
+            background-image: url("../assets/img/shop/check-no.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 36px 36px;
+            margin-right: 25px;
+            &.selected{
+              background-image: url("../assets/img/shop/check-ok.png");
+            }
+          }
+          .text{
+            margin-right: 10px;
+          }
+        }
+        .total-price-container{
+          display: inline-block;
+          vertical-align: middle;
+          .total-price{
+            color: #FF1F1F;
+          }
+        }
+      }
+      .submit-part{
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+        text-align: center;
+        color: #fff;
+        background-color: #1dce7e;
+      }
+    }
+    .nothing{
+      height: 196px;
     }
   }
 </style>
