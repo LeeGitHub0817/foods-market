@@ -207,22 +207,23 @@ export default {
                 }
               }
               .not-first{
-                width: 50%;
+                width: 40%;
                 border-radius: 50px;
                 border: 1px solid #1dce7e;
                 padding: 5px 8px;
                 .input-count{
-                  width: 52%;
-                  height: 50px;
+                  width: 42%;
+                  height: 40px;
                   text-align: center;
                   font-size: 28px;
+                  margin: 0 10px;
                 }
                 .common{
                   display: inline-block;
                   vertical-align: middle;
-                  width: 50px;
-                  height: 50px;
-                  background-size: 50px 50px;
+                  width: 40px;
+                  height: 40px;
+                  background-size: 40px 40px;
                   background-repeat: no-repeat;
                   background-position: center;
                 }
