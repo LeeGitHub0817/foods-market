@@ -23,12 +23,63 @@
                   <div class="price-item">
                     <span class="symbol">￥</span>
                     <span class="price-num">28.98</span>
+                    <span class="unit">/斤</span>
                   </div>
                   <!--第一次购买-->
                   <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
                   <!--非第一次购买-->
                   <div class="not-first">
-                    
+                    <span class="reduce common"></span>
+                    <input class="input-count" type="number" value="1">
+                    <span class="add common"></span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product-item clear-float">
+              <a class="img-box left-float" href="">
+                <img class="img-show" src="/static/index/9.png" alt="产品图片">
+              </a>
+              <div class="relativeinfo-box right-float">
+                <p class="product-name">美味八爪鱼</p>
+                <p class="product-desc">美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒</p>
+                <div class="price-buy-box">
+                  <div class="price-item">
+                    <span class="symbol">￥</span>
+                    <span class="price-num">28.98</span>
+                    <span class="unit">/斤</span>
+                  </div>
+                  <!--第一次购买-->
+                  <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                  <!--非第一次购买-->
+                  <div class="not-first">
+                    <span class="reduce common"></span>
+                    <input class="input-count" type="number" value="1">
+                    <span class="add common"></span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product-item clear-float">
+              <a class="img-box left-float" href="">
+                <img class="img-show" src="/static/index/9.png" alt="产品图片">
+              </a>
+              <div class="relativeinfo-box right-float">
+                <p class="product-name">美味八爪鱼</p>
+                <p class="product-desc">美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒美味八爪鱼,味道相当的棒，美味八爪鱼,味道相当的棒</p>
+                <div class="price-buy-box">
+                  <div class="price-item">
+                    <span class="symbol">￥</span>
+                    <span class="price-num">28.98</span>
+                    <span class="unit">/斤</span>
+                  </div>
+                  <!--第一次购买-->
+                  <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                  <!--非第一次购买-->
+                  <div class="not-first">
+                    <span class="reduce common"></span>
+                    <input class="input-count" type="number" value="1">
+                    <span class="add common"></span>
                   </div>
                 </div>
               </div>
@@ -89,8 +140,10 @@ export default {
     .commonlist-content{
       background-color: #f7f7f7;
       .product-list{
-        background-color: #fff;
+        background-color: #f7f7f7;
         .product-item{
+          background-color: #fff;
+          margin-bottom: 20px;
           padding: 25px 15px;
           .img-box{
             display: block;
@@ -115,6 +168,7 @@ export default {
             .product-desc{
               margin: 10px 0 15px 0;
               // min-height: 120px;
+              color: #999;
               overflow: hidden;
               display: -webkit-box;
               text-overflow: ellipsis;
@@ -135,6 +189,10 @@ export default {
                 .price-num{
                   font-size: 28px;
                 }
+                .unit{
+                  color: #999;
+                  font-size: 24px;
+                }
               }
               .first-count{
                 margin-right: 20px;
@@ -146,6 +204,33 @@ export default {
                   background-size: 50px 50px;
                   background-repeat: no-repeat;
                   background-position: center;
+                }
+              }
+              .not-first{
+                width: 50%;
+                border-radius: 50px;
+                border: 1px solid #1dce7e;
+                padding: 5px 8px;
+                .input-count{
+                  width: 52%;
+                  height: 50px;
+                  text-align: center;
+                  font-size: 28px;
+                }
+                .common{
+                  display: inline-block;
+                  vertical-align: middle;
+                  width: 50px;
+                  height: 50px;
+                  background-size: 50px 50px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+                .reduce{
+                  background-image: url("../assets/img/shop/green-reduce.png");
+                }
+                .add{
+                  background-image: url("../assets/img/shop/green-add.png");
                 }
               }
             }
