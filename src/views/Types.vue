@@ -25,7 +25,7 @@
     <!--二级菜单和产品详情-->
     <div class="type-list-box">
       <ul class="second-menu">
-        <li class="menu-item">鱼</li>
+        <li class="menu-item active">鱼</li>
         <li class="menu-item">虾</li>
         <li class="menu-item">蟹</li>
         <li class="menu-item">贝</li>
@@ -35,7 +35,7 @@
       <ul class="product-list">
         <li class="product-item">
           <a class="item-box" href="">
-            <div class="img-box"><img class="img-show" src="" alt="产品图"></div>
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
             <div class="product-info-box">
               <p class="product-name">美味八爪鱼</p>
               <div class="price-buy">
@@ -106,6 +106,7 @@ export default {
     height: 90px;
     padding-left: 15px;
     font-size: 0;
+    border-bottom: 1px solid #f4f4f4;
     .navmenu-list{
       display: flex;
       align-items: center;
@@ -118,6 +119,7 @@ export default {
         display: inline-block;
         font-size: 28px;
         padding: 5px 20px;
+        color: #666;
         &.active{
           background-color: #1dce7e;
           border-radius: 30px;
@@ -139,6 +141,56 @@ export default {
         box-shadow: -10px 0 12px -7px rgba(29,206,126,.9);
       }
     }
-    
+  }
+  .type-list-box{
+    font-size: 0;
+    .second-menu{
+      display: inline-block;
+      vertical-align: top;
+      width: 20%;
+      box-sizing: border-box;
+      // border-right: 1px solid #f4f4f4;
+      text-align: center;
+      .menu-item{
+        padding: 15px 0;
+        color: #999;
+        &.active{
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+    .product-list{
+      display: inline-block;
+      vertical-align: top;
+      width: 80%;
+      .product-item{
+        padding: 20px 25px 20px 0;
+        .item-box{
+          display: -webkit-box;
+          .img-box{
+            width: 180px;
+            height: 180px;
+            .img-show{
+              width: 180px;
+              height: 180px;
+            }
+          }
+          .product-info-box{
+            -webkit-box-flex: 1;
+            margin-left: 15px;
+            .product-name{
+              font-size: 28px;
+              font-weight: bold;
+              display: -webkit-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+    }
   }
 </style>
