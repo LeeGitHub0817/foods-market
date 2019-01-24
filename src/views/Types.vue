@@ -1,13 +1,57 @@
 <template>
   <div>
+    <!--搜索部分-->
     <div class="type-function-box">
       <em class="service-icon icon-common"></em>
       <div class="search-container">
-
+        <input class="search-input" type="text" placeholder="请输入关键字">
       </div>
       <em class="more-icon icon-common"></em>
     </div>
-    
+    <!--一级导航菜单部分-->
+    <div class="type-navmenu-box">
+      <ul class="navmenu-list">
+        <li class="navmenu-item active">活鲜水产</li>
+        <li class="navmenu-item">冷冻食材</li>
+        <li class="navmenu-item">粮油干调</li>
+        <li class="navmenu-item">蔬菜水果</li>
+        <li class="navmenu-item">新鲜肉禽</li>
+        <li class="navmenu-item">鲜花野味</li>
+        <li class="navmenu-item">酒水茶叶</li>
+        <li class="navmenu-item">珍品</li>
+      </ul>
+      <div class="dropdown-btn ignore"><em class="btn-icon"></em></div>
+    </div>
+    <!--二级菜单和产品详情-->
+    <div class="type-list-box">
+      <ul class="second-menu">
+        <li class="menu-item">鱼</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
+      </ul>
+      <ul class="product-list">
+        <li class="product-item">
+          <a class="item-box" href="">
+            <div class="img-box"><img class="img-show" src="" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
     <foot-part></foot-part>
   </div>
 </template>
@@ -23,10 +67,11 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fafafa;
     .icon-common{
       display: inline-block;
       width: 12%;
-      height: 100px;
+      height: 120px;
       background-position: center;
       background-size: 50px 50px;
       background-repeat: no-repeat;
@@ -38,8 +83,62 @@ export default {
       background-image: url("../assets/img/shop/more.png");
     }
     .search-container{
+      display: flex;
+      align-items: center;
       width: 76%;
-      height: 100px;
+      height: 120px;
+      .search-input{
+        width: 100%;
+        height: 70px;
+        background-color: #ededed;
+        border-radius: 35px;
+        box-sizing: border-box;
+        padding-left: 75px;
+        background-image: url("../assets/img/shop/search.png");
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        background-size: 40px 40px;
+      }
     }
+  }
+  .type-navmenu-box{
+    position: relative;
+    height: 90px;
+    padding-left: 15px;
+    font-size: 0;
+    .navmenu-list{
+      display: flex;
+      align-items: center;
+      width: 88%;
+      height: 90px;
+      font-size: 0;
+      white-space: nowrap;
+      overflow: scroll;
+      .navmenu-item{
+        display: inline-block;
+        font-size: 28px;
+        padding: 5px 20px;
+        &.active{
+          background-color: #1dce7e;
+          border-radius: 30px;
+          color: #fff;
+        }
+      }
+    }
+    .dropdown-btn{
+      position: absolute;
+      background-color: #fff;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 12%;
+      height: 90px;
+      // border-left: 1px solid #1dce7e;
+      &.ignore{
+        box-shadow: -10px 0 12px -7px rgba(29,206,126,.9);
+      }
+    }
+    
   }
 </style>
