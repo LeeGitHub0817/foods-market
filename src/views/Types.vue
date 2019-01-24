@@ -24,25 +24,58 @@
     </div>
     <!--二级菜单和产品详情-->
     <div class="type-list-box">
-      <ul class="second-menu">
+      <ul class="second-menu" :style="{ height: listHeight + 'px' }">
         <li class="menu-item active">鱼</li>
         <li class="menu-item">虾</li>
         <li class="menu-item">蟹</li>
         <li class="menu-item">贝</li>
         <li class="menu-item">螺</li>
         <li class="menu-item">鸡</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
+        <li class="menu-item">虾</li>
+        <li class="menu-item">蟹</li>
+        <li class="menu-item">贝</li>
+        <li class="menu-item">螺</li>
+        <li class="menu-item">鸡</li>
       </ul>
-      <ul class="product-list">
+      <ul class="product-list" :style="{ height: listHeight + 'px' }">
         <li class="product-item">
           <a class="item-box" href="">
             <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
             <div class="product-info-box">
-              <p class="product-name">美味八爪鱼</p>
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
               <div class="price-buy">
                 <div class="price-item">
                   <span class="symbol">￥</span>
                   <span class="price">25.98</span>
                   <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" ><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" style="display:none;">
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
                 </div>
               </div>
             </div>
@@ -58,7 +91,20 @@
 
 <script>
 export default {
-  
+  data: function(){
+    return {
+      listHeight: 0
+    }
+  },
+  methods: {
+
+  },
+  mounted: function(){
+    //计算中间部分的高度
+    this.listHeight = window.innerHeight - document.querySelector(".type-function-box").offsetHeight - 
+      document.querySelector(".type-navmenu-box").offsetHeight - document.querySelector(".footer-container").offsetHeight -
+      parseFloat(window.getComputedStyle(document.querySelector(".type-navmenu-box")).marginBottom);
+  }
 }
 </script>
 
@@ -106,7 +152,9 @@ export default {
     height: 90px;
     padding-left: 15px;
     font-size: 0;
-    border-bottom: 1px solid #f4f4f4;
+    // border-bottom: 1px solid #f4f4f4;
+    box-shadow: 0px 11px 20px -1px #f4f4f4f4;
+    margin-bottom: 20px;
     .navmenu-list{
       display: flex;
       align-items: center;
@@ -144,6 +192,7 @@ export default {
   }
   .type-list-box{
     font-size: 0;
+    box-sizing: border-box;
     .second-menu{
       display: inline-block;
       vertical-align: top;
@@ -151,6 +200,8 @@ export default {
       box-sizing: border-box;
       // border-right: 1px solid #f4f4f4;
       text-align: center;
+      overflow-x: hidden;
+      overflow-y: scroll;
       .menu-item{
         padding: 15px 0;
         color: #999;
@@ -164,6 +215,8 @@ export default {
       display: inline-block;
       vertical-align: top;
       width: 80%;
+      overflow-x: hidden;
+      overflow-y: scroll;
       .product-item{
         padding: 20px 25px 20px 0;
         .item-box{
@@ -177,6 +230,7 @@ export default {
             }
           }
           .product-info-box{
+            position: relative;
             -webkit-box-flex: 1;
             margin-left: 15px;
             .product-name{
@@ -187,6 +241,72 @@ export default {
               text-overflow: ellipsis;
               -webkit-line-clamp: 2;
               -webkit-box-orient: vertical;
+            }
+            .price-buy{
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              min-height: 55px;
+              .price-item{
+                font-weight: bold;
+                color: #ff1f1f;
+                .symbol{
+                  font-size: 24px;
+                }
+                .price-num{
+                  font-size: 28px;
+                }
+                .unit{
+                  color: #999;
+                  font-size: 24px;
+                }
+              }
+              .first-count{
+                margin-right: 20px;
+                width: 50px;
+                height: 50px;
+                .firstbuy-btn{
+                  display: inline-block;
+                  width: 50px;
+                  height: 50px;
+                  background-image: url("../assets/img/shop/add-first.png");
+                  background-size: 50px 50px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+              .not-first{
+                width: 48%;
+                border-radius: 50px;
+                border: 1px solid #1dce7e;
+                padding: 5px 8px;
+                .input-count{
+                  width: 42%;
+                  height: 40px;
+                  text-align: center;
+                  font-size: 28px;
+                  margin: 0 10px;
+                }
+                .common{
+                  display: inline-block;
+                  vertical-align: middle;
+                  width: 40px;
+                  height: 40px;
+                  background-size: 40px 40px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+                .reduce{
+                  background-image: url("../assets/img/shop/green-reduce.png");
+                }
+                .add{
+                  background-image: url("../assets/img/shop/green-add.png");
+                }
+              }
             }
           }
         }
