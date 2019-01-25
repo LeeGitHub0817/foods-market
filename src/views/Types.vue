@@ -20,7 +20,7 @@
         <li class="navmenu-item">酒水茶叶</li>
         <li class="navmenu-item">珍品</li>
       </ul>
-      <div class="dropdown-btn ignore"><em class="btn-icon"></em></div>
+      <div class="dropdown-btn ignore"><em class="btn-icon" v-on:click="showCategory()"></em></div>
     </div>
     <!--二级菜单和产品详情-->
     <div class="type-list-box">
@@ -223,13 +223,13 @@
     </div>
 
     <!--模态窗口-->
-    <div :class="{'modalbox-menu': true, active: true}">
+    <div :class="{'modalbox-menu': true, active: isShowCategory}" @click="hideCategory()">
       <div class="modaldialog-menu">
         <div class="title-box">
           <p class="title">请选择具体分类</p>
           <em class="arrow-btn"></em>
         </div>
-        <ul class="category-name-box">
+        <ul class="category-name-box" @click.stop="switchItem($event)">
           <li class="name-item"><span class="item active">活鲜水产</span></li>
           <li class="name-item"><span class="item">冷冻食材</span></li>
           <li class="name-item"><span class="item">粮油干调</span></li>
@@ -249,14 +249,22 @@
 export default {
   data: function(){
     return {
-      listHeight: 0 //中间内容高度
+      listHeight: 0, //中间内容高度
       isShowCategory: false
     }
   },
   methods: {
     //显示分类模态窗口
     showCategory: function(){
-
+      this.isShowCategory = !this.isShowCategory;
+    },
+    //隐藏分类模态窗口
+    hideCategory: function(){
+      this.isShowCategory = !this.isShowCategory;
+    },
+    //切换分类模态窗口的内容
+    switchItem: function(e){
+      console.log(e);
     }
   },
   mounted: function(){
