@@ -59,7 +59,7 @@
       </ul>
       <ul class="product-list" :style="{ height: listHeight + 'px' }">
         <li class="product-item">
-          <a class="item-box" href="">
+          <a class="item-box" href="javascript:(void)">
             <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
             <div class="product-info-box">
               <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
@@ -70,9 +70,147 @@
                   <span class="unit">/斤</span>
                 </div>
                 <!--第一次购买-->
-                <div class="first-count" ><i class="firstbuy-btn"></i></div>
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
                 <!--非第一次购买-->
-                <div class="not-first" style="display:none;">
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
+                  <span class="reduce common"></span>
+                  <input class="input-count" type="number" value="1">
+                  <span class="add common"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-item">
+          <a class="item-box" href="javascript:(void)">
+            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+            <div class="product-info-box">
+              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <div class="price-buy">
+                <div class="price-item">
+                  <span class="symbol">￥</span>
+                  <span class="price">25.98</span>
+                  <span class="unit">/斤</span>
+                </div>
+                <!--第一次购买-->
+                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <!--非第一次购买-->
+                <div class="not-first" >
                   <span class="reduce common"></span>
                   <input class="input-count" type="number" value="1">
                   <span class="add common"></span>
@@ -84,7 +222,25 @@
       </ul>
     </div>
 
-
+    <!--模态窗口-->
+    <div :class="{'modalbox-menu': true, active: true}">
+      <div class="modaldialog-menu">
+        <div class="title-box">
+          <p class="title">请选择具体分类</p>
+          <em class="arrow-btn"></em>
+        </div>
+        <ul class="category-name-box">
+          <li class="name-item"><span class="item active">活鲜水产</span></li>
+          <li class="name-item"><span class="item">冷冻食材</span></li>
+          <li class="name-item"><span class="item">粮油干调</span></li>
+          <li class="name-item"><span class="item">蔬菜水果</span></li>
+          <li class="name-item"><span class="item">新鲜肉禽</span></li>
+          <li class="name-item"><span class="item">活鲜水产</span></li>
+          <li class="name-item"><span class="item">酒水茶叶</span></li>
+          <li class="name-item"><span class="item">珍品</span></li>
+        </ul>
+      </div>
+    </div>
     <foot-part></foot-part>
   </div>
 </template>
@@ -93,11 +249,15 @@
 export default {
   data: function(){
     return {
-      listHeight: 0
+      listHeight: 0 //中间内容高度
+      isShowCategory: false
     }
   },
   methods: {
+    //显示分类模态窗口
+    showCategory: function(){
 
+    }
   },
   mounted: function(){
     //计算中间部分的高度
@@ -184,9 +344,17 @@ export default {
       display: inline-block;
       width: 12%;
       height: 90px;
-      // border-left: 1px solid #1dce7e;
       &.ignore{
         box-shadow: -10px 0 12px -7px rgba(29,206,126,.9);
+      }
+      .btn-icon{
+        display: block;
+        width: 100%;
+        height: 90px;
+        background-image: url("../assets/img/shop/arrow-down.png");
+        background-position: center;
+        background-size: 40px;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -235,7 +403,6 @@ export default {
             margin-left: 15px;
             .product-name{
               font-size: 28px;
-              font-weight: bold;
               display: -webkit-box;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -280,33 +447,102 @@ export default {
                 }
               }
               .not-first{
-                width: 48%;
+                width: 47%;
                 border-radius: 50px;
-                border: 1px solid #1dce7e;
                 padding: 5px 8px;
+                background-color: #f8f8f8;
                 .input-count{
-                  width: 42%;
+                  width: 32%;
                   height: 40px;
                   text-align: center;
                   font-size: 28px;
+                  background-color: #f8f8f8;
                   margin: 0 10px;
                 }
                 .common{
                   display: inline-block;
                   vertical-align: middle;
-                  width: 40px;
-                  height: 40px;
-                  background-size: 40px 40px;
+                  width: 50px;
+                  height: 50px;
+                  background-size: 50px 50px;
                   background-repeat: no-repeat;
                   background-position: center;
                 }
                 .reduce{
-                  background-image: url("../assets/img/shop/green-reduce.png");
+                  background-image: url("../assets/img/shop/m-reduce.png");
                 }
                 .add{
-                  background-image: url("../assets/img/shop/green-add.png");
+                  background-image: url("../assets/img/shop/m-add.png");
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modalbox-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 19;
+    &.active{
+      display: block;
+    }
+    .modaldialog-menu{
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      z-index: 20;
+      .title-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        height: 90px;
+        .title{
+          font-size: 28px;
+          color: #666;
+          padding-left: 32px;
+        }
+        .arrow-btn{
+          display: block;
+          width: 12%;
+          height: 90px;
+          background-image: url("../assets/img/shop/arrow-up.png");
+          background-position: center;
+          background-size: 40px;
+          background-repeat: no-repeat;
+        }
+      }
+      .category-name-box{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+        padding: 15px 40px 40px 40px;
+        .name-item{
+          width: 33%;
+          text-align: center;
+          margin-bottom: 25px;
+          .item{
+            display: inline-block;
+            background-color: #ebebeb;
+            color: #333;
+            width: 80%;
+            padding: 13px 0;
+            border-radius: 40px;
+            &.active{
+              color: #fff;
+              background-color: #1dce7e;
             }
           }
         }

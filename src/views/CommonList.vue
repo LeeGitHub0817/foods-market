@@ -209,14 +209,15 @@ export default {
               .not-first{
                 width: 40%;
                 border-radius: 50px;
-                border: 1px solid #1dce7e;
                 padding: 5px 8px;
+                background-color: #f8f8f8;
                 .input-count{
                   width: 42%;
                   height: 40px;
                   text-align: center;
                   font-size: 28px;
                   margin: 0 10px;
+                  background-color: #f8f8f8;
                 }
                 .common{
                   display: inline-block;
@@ -228,10 +229,10 @@ export default {
                   background-position: center;
                 }
                 .reduce{
-                  background-image: url("../assets/img/shop/green-reduce.png");
+                  background-image: url("../assets/img/shop/m-reduce.png");
                 }
                 .add{
-                  background-image: url("../assets/img/shop/green-add.png");
+                  background-image: url("../assets/img/shop/m-add.png");
                 }
               }
             }
