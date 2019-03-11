@@ -13,5 +13,29 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script type="text/JavaScript">
+      //以下代码是为了解决在iOS 10系统之后设置meta来禁止缩放失效的问题
+      window.onload = function() {
+        // 阻止双击放大
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // 阻止双指放大
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault();
+        });
+      }
+    </script>
   </body>
 </html>
