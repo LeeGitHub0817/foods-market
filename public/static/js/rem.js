@@ -14,7 +14,7 @@
             if (a > 720 ){//720不固定，根据设计稿的高度定  
                 a = 720;  
             }   
-            rem = a /26.78;  
+            var rem = a / 26.78;  
             r.style.fontSize = rem + "px"  
         }  
         w();  
