@@ -34,13 +34,13 @@ export default {
     }
   },
   methods: {
-    handleClickIcon: function($event){ //绑定事件委托
-      //console.log($event.target.tagName);
-      var target = $event.target;
-      if(target.tagName === "A"){
-        target.classList.add("active");
-      }
-    }
+    // handleClickIcon: function($event){ //绑定事件委托
+    //   //console.log($event.target.tagName);
+    //   var target = $event.target;
+    //   if(target.tagName === "A"){
+    //     target.classList.add("active");
+    //   }
+    // }
   }
 }
 </script>
