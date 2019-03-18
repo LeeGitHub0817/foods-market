@@ -6,5 +6,6 @@ module.exports = {
     hotOnly: false,
     proxy: false,
     before: (app)=>{}
-  }
+  },
+  lintOnSave: false
 }
