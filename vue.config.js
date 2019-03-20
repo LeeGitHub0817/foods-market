@@ -7,5 +7,5 @@ module.exports = {
     proxy: false,
     before: (app)=>{}
   },
-  lintOnSave: false
+  lintOnSave: false //关闭eslint
 }

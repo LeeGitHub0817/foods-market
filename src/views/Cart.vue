@@ -219,7 +219,11 @@
 
 <script>
 export default {
-  
+  data: function(){
+    return {
+      title: '购物车'
+    }
+  }
 }
 </script>
 
