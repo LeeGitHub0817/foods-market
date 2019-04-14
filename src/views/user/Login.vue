@@ -36,4 +36,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../assets/sass/user.scss"></style>
+<style lang="scss" src="@/assets/sass/user.scss"></style>
