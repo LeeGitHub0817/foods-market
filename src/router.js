@@ -18,9 +18,9 @@ const Types = r => require.ensure([], () => r(require('./views/Types.vue')), 'ty
 const CommonList = r => require.ensure([], () => r(require('./views/CommonList')), 'commonlist');
 const Cart = r => require.ensure([], () => r(require('./views/Cart.vue')), 'cart');
 const UserCenter = r => require.ensure([], () => r(require('./views/UserCenter.vue')), 'usercenter');
-const Login = r => require.ensure([], () => r(require('./views/Login')), 'login');
-const Register = r => require.ensure([], () => r(require('./views/Register')), 'register');
-const Retrieve = r => require.ensure([], () => r(require('./views/Retrieve')), 'retrieve');
+const Login = r => require.ensure([], () => r(require('./views/user/Login')), 'login');
+const Register = r => require.ensure([], () => r(require('./views/user/Register')), 'register');
+const Retrieve = r => require.ensure([], () => r(require('./views/user/Retrieve')), 'retrieve');
 
 Vue.use(Router)
 
