@@ -35,7 +35,7 @@
     outline: 0;
     -webkit-appearance: none;
   }
-  .clear-float:after{
+  .clear-float::after{
     display: block;
     content: "";
     clear: both;
@@ -46,7 +46,7 @@
   .right-float{
     float: right;
   }
-  .clear-flow:before{
+  .clear-flow::before{
     display: table;
     content: "";
   }
