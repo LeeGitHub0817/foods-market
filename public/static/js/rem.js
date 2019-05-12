@@ -1,12 +1,5 @@
 
 (function(){
-    // var btn=document.getElementsByClassName("iconfont icon-shenqing-fanhui");
-    // var btn=document.getElementsByClassName("iconfont icon-shenqing-fanhui");
-    // for(var i=0;i<btn.length;i++){
-    //     btn[i].addEventListener("click", function(){
-    //     history.back();
-    //     })
-    // }
 	(function(){  
         function w() {  
             var r = document.documentElement;  
