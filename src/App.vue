@@ -50,4 +50,25 @@
     display: table;
     content: "";
   }
+  .medium-font-500{
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+  }
+  .regular-font-400{
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+  }
+  /*单行省略号--这个记得给容器一个固定宽度*/
+  .oneline-ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /*多行省略号--这个记得给容器加一个属性-webkit-line-clamp: 2，表示要显示多少行，适用于webkkit内核浏览器*/
+  .multiline-ellipsis{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
 </style>

@@ -3,15 +3,6 @@ import Router from 'vue-router'
 
 import App from "./App.vue";
 //引入自己定义的组件
-// import Home from "./views/Home.vue";
-// import Types from "./views/Types.vue";
-// import CommonList from "./views/CommonList.vue";
-// import Cart from "./views/Cart.vue";
-// import UserCenter from "./views/UserCenter.vue";
-// import Login from "./views/Login";
-// import Register from "./views/Register";
-// import Retrieve from "./views/Retrieve";
-
 //使用懒加载方案，实现按需加载
 const Home = r => require.ensure([], () => r(require('./views/Home.vue')), 'home');
 const Types = r => require.ensure([], () => r(require('./views/Types.vue')), 'types');
@@ -21,6 +12,7 @@ const UserCenter = r => require.ensure([], () => r(require('./views/UserCenter.v
 const Login = r => require.ensure([], () => r(require('./views/user/Login')), 'login');
 const Register = r => require.ensure([], () => r(require('./views/user/Register')), 'register');
 const Retrieve = r => require.ensure([], () => r(require('./views/user/Retrieve')), 'retrieve');
+const ProductDetail = r => require.ensure([], () => r(require('./views/ProductDetail')), 'productdetail');
 
 Vue.use(Router)
 
@@ -37,7 +29,7 @@ export default new Router({
         },
         {
           path: "/",
-          name: 'name',
+          name: 'home',
           component: Home
         },
         {
@@ -78,6 +70,11 @@ export default new Router({
           path: '/retrieve',
           name: 'retrieve',
           component: Retrieve
+        },
+        {
+          path: '/productdetail',
+          name: 'productdetail',
+          component: ProductDetail
         }
       ]
     }
