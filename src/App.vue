@@ -58,6 +58,10 @@
     font-family:PingFangSC-Regular;
     font-weight:400;
   }
+  .semibold-font-600{
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+  }
   /*单行省略号--这个记得给容器一个固定宽度*/
   .oneline-ellipsis{
     overflow: hidden;
@@ -70,5 +74,21 @@
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-box-orient: vertical;
+  }
+  /*使用的弹性布局*/
+  .flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-start-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 </style>

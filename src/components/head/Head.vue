@@ -30,6 +30,7 @@ export default {
     box-sizing: border-box;
     padding: 0 32px;
     background-color: #fff;
+    z-index: 10;
   }
   .back-arrow{
     width: 45px;
