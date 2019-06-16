@@ -1,6 +1,6 @@
 <template>
   <header class="head-box">
-    <img class="back-arrow" src="@/assets/img/head/goback.png">
+    <img @click="goBack" class="back-arrow" src="@/assets/img/head/goback.png">
     <p class="head-title">{{ title }}</p>
     <div class="placeholder"></div>
   </header>
@@ -13,7 +13,12 @@ export default {
     return {
       title: this.titleHead
     }
-  }
+  },
+  methods: {
+    goBack(){
+      this.$router.go(-1);
+    }
+  },
 }
 </script>
 

@@ -279,6 +279,7 @@ export default {
             padding-left: 30px;
             padding-right: 11px;
             border-radius: 18px; 
+            line-height: 26px;
           }
         }
         .account-set{

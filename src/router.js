@@ -13,6 +13,7 @@ const Login = r => require.ensure([], () => r(require('./views/user/Login')), 'l
 const Register = r => require.ensure([], () => r(require('./views/user/Register')), 'register');
 const Retrieve = r => require.ensure([], () => r(require('./views/user/Retrieve')), 'retrieve');
 const ProductDetail = r => require.ensure([], () => r(require('./views/ProductDetail')), 'productdetail');
+const ConfirmOrder = r => require.ensure([], () => r(require('./views/orders/ConfirmOrder')), 'confirmorder');
 
 Vue.use(Router)
 
@@ -75,6 +76,11 @@ export default new Router({
           path: '/productdetail',
           name: 'productdetail',
           component: ProductDetail
+        },
+        {
+          path: '/confirmorder',
+          name: 'confirmorder',
+          component: ConfirmOrder
         }
       ]
     }
