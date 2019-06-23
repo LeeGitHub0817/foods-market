@@ -91,4 +91,9 @@
     justify-content: flex-start;
     align-items: center;
   }
+  .flex-around-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 </style>
