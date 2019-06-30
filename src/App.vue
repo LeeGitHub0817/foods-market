@@ -18,7 +18,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 26px;
+    font-size: 100%;
   }
   img{
     border: 0;
