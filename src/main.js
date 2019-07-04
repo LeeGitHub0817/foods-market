@@ -6,7 +6,7 @@ import router from './router'
 import FootPart from "./components/Foot.vue";
 import HeadCom from "./components/head/Head.vue";
 //引入vant ui组件
-import { Icon, Stepper, Field, Cell, CellGroup } from "vant";
+import { Icon, Stepper, Field, Cell, CellGroup, Toast } from "vant";
 
 Vue.config.productionTip = false
 
@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 Vue.component("foot-part", FootPart);
 Vue.component('head-com', HeadCom);
 //使用vant组件
-Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup);
+Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast);
 
 new Vue({
   router,
