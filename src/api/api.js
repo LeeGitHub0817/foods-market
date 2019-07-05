@@ -14,5 +14,25 @@ export default {
                 reject(err);
             })
         })
+    },
+    //验证手机号是否已经注册
+    checkPhoneNum(params){
+        return new Promise((resolve, reject) => {
+            axios.post('/user/isRegister', params).then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            })
+        })
+    },
+    //用户登录
+    userLogin(params){
+        return new Promise((resolve, reject) => {
+            axios.post('/user/login', params).then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            })
+        })
     }
 }

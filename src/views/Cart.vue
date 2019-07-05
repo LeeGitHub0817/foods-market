@@ -352,6 +352,7 @@ export default {
                 margin-bottom: 15px;
               }
               .goods-param-box{
+                font-size: 26px;
                 height: 40px;
                 line-height: 40px;
                 color: #666;

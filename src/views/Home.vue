@@ -573,6 +573,7 @@ export default {
           .price-number{
             color: $main-red;
             font-weight: bold;
+            font-size: 26px;
           }
           .unit-symbol{
             color: $main-text-gray;
@@ -626,6 +627,7 @@ export default {
               .price-number{
                 color: $main-red;
                 font-weight: bold;
+                font-size: 26px;
               }
               .unit-symbol{
                 color: $main-text-gray;
@@ -687,6 +689,7 @@ export default {
           .price-number{
             color: $main-red;
             font-weight: bold;
+            font-size: 26px;
           }
           .unit-symbol{
             color: $main-text-gray;

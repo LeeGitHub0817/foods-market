@@ -381,6 +381,7 @@ export default {
       .menu-item{
         padding: 15px 0;
         color: #999;
+        font-size: 26px;
         &.active{
           color: #333;
           font-weight: bold;

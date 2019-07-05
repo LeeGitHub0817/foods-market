@@ -3,7 +3,7 @@
     <form class="l-form" action="">
       <div class="l-common l-phone">
         <div class="common phone-con">
-          <input v-model="formData.telNumber" type="number" placeholder="手机号码">
+          <input @blur="checkTelNum" v-model="formData.telNumber" type="number" placeholder="手机号码">
         </div>
       </div>
       <div class="l-common l-code">
@@ -55,6 +55,7 @@ export default {
     return {
       isShowTimeCount: false, //是否显示验证码倒计时
       isAgreePoliy: false, //是否同意协议
+      isTelNumUsed: false, //电话号码是否注册过
       
       //要提交的表单数据
       formData: {
@@ -86,6 +87,24 @@ export default {
     handleSelectPolicy: function(){
       this.isAgreePoliy = this.isAgreePoliy === false ? true : false;
     },
+    //验证手机号码是否注册过
+    checkTelNum(){
+      if(/^1[356789]\d{9}$/.test(this.formData.telNumber) == false){
+        Toast('请输入正确的手机号码！');
+        return;
+      }
+      api.checkPhoneNum({telNumber: this.formData.telNumber}).then((res) => {
+        console.log(res);
+        //手机号码可用
+        if(res.data.data.status == true){
+          this.isTelNumUsed = false;
+          Toast(res.data.data.msg);
+        }else{ //手机号码不可用
+          this.isTelNumUsed = true;
+          Toast(res.data.data.msg);
+        }
+      })
+    },
     //提交注册
     submit(){
       //提交数据前的初次验证
@@ -95,6 +114,10 @@ export default {
       }
       if(this.formData.upwd.length < 6){
         Toast('输入的密码需要大于6位！');
+        return;
+      }
+      if(this.isTelNumUsed == true){
+        Toast('该手机号码已经注册过，请跟换手机号后重试！');
         return;
       }
       //调用接口
