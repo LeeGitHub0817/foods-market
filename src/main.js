@@ -6,7 +6,8 @@ import router from './router'
 import FootPart from "./components/Foot.vue";
 import HeadCom from "./components/head/Head.vue";
 //引入vant ui组件
-import { Icon, Stepper, Field, Cell, CellGroup, Toast } from "vant";
+import { Icon, Stepper, Field, Cell, CellGroup, Toast, Button,
+  Switch } from "vant";
 
 Vue.config.productionTip = false
 
@@ -14,7 +15,18 @@ Vue.config.productionTip = false
 Vue.component("foot-part", FootPart);
 Vue.component('head-com', HeadCom);
 //使用vant组件
-Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast);
+Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast).use(Button)
+  .use(Switch);
+
+//手机上判断底部按钮位置（弹出键盘时会把底部fixe部分顶上去）
+var nowHeight = window.innerHeight;
+window.addEventListener('resize', function(){
+  if(window.innerHeight < nowHeight){
+    document.getElementById('fixed_part').style.position = 'static';
+  }else{
+    document.getElementById('fixed_part').style.position = 'fixed';
+  }
+}, false);
 
 new Vue({
   router,
