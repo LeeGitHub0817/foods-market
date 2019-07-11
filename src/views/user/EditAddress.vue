@@ -6,31 +6,31 @@
     <div class="address-main">
       <van-cell-group>
         <van-field
-          v-model="userName"
+          v-model="dataForm.userName"
           size="large"
           clearable
           label="姓名"
           placeholder="请输入真实姓名"
         />
         <van-field
-          v-model="telNumber"
+          v-model="dataForm.telNumber"
           size="large"
           clearable
           label="电话号码"
           placeholder="请输入电话号码"
         />
         <van-field
-          v-model="address"
+          v-model="dataForm.address"
           center
           size="large"
           clearable
           label="所在区域"
           placeholder="请选择区域"
         >
-          <van-button slot="button" size="small" type="primary">选择地区</van-button>
+          <van-button slot="button" size="small" type="primary" @click="showLoctionPop">选择地区</van-button>
         </van-field>
         <van-field 
-          v-model="addressDetail"
+          v-model="dataForm.addressDetail"
           label="详细地址"
           type="textarea"
           placeholder="请输入详细的地址"
@@ -38,27 +38,62 @@
           autosize
         />
         <van-cell title="是否设置为默认地址">
-          <van-switch v-model="isDefault" active-color="#00B050" inactive-color="#CBCBCB" size="22px"/>
+          <van-switch v-model="dataForm.isDefault" active-color="#00B050" inactive-color="#CBCBCB" size="22px"/>
         </van-cell>
       </van-cell-group>
     </div>
 
+    <!--地址选择弹窗-->
+    <van-popup v-model="isShowLoctionPop" position="bottom">
+      <van-area :area-list="areaList" title="请选择区域" @cancel="handleCancel" @confirm="handleConfirm"></van-area>
+    </van-popup>
+
     <!--提交保存-->
     <div id="fixed_part" class="ea-submit-wrap flex-all-center">
-      <div class="submit-btn flex-all-center">保存</div>
+      <div @click="submitInfo" class="submit-btn flex-all-center">保存</div>
     </div>
   </div>
 </template>
 
 <script>
+import areaList from '../../assets/js/area';
 export default {
   data: function(){
     return {
-      userName: '', //用户姓名
-      telNumber: '', //电话号码
-      address: '', //地区区域
-      addressDetail: '', //地址详情
-      isDefault: false, //是否默认地址
+      //提交的数据
+      dataForm: {
+        userName: '', //用户姓名
+        telNumber: '', //电话号码
+        address: '', //地区区域
+        addressDetail: '', //地址详情
+        isDefault: false, //是否默认地址
+      },
+      
+      isShowLoctionPop: false, //显示地址选择弹窗
+      areaList: areaList, //地址列表
+    }
+  },
+  methods: {
+    //显示区域选择弹窗
+    showLoctionPop(){
+      this.isShowLoctionPop = true;
+    },
+    //地址选择取消按钮
+    handleCancel(){
+      this.isShowLoctionPop = false;
+    },
+    //地址选择确认按钮
+    handleConfirm(val){
+      this.isShowLoctionPop = false;
+      var str = '';
+      for(let item of val){
+        str += item.name;
+      }
+      this.dataForm.address = str;
+    },
+    //点击保存按钮
+    submitInfo(){
+      console.log(this.dataForm)
     }
   }
 }
