@@ -47,8 +47,9 @@
     <div class="u-order">
       <div class="order-nothing"></div>
       <div class="order-btn">
-        <span data-btn="1" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color ordinary-btn': true, active: switchOption === false}">普通订单</span>
-        <span data-btn="2" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color bill-btn': true, active: switchOption === true}">账期订单</span>
+        <span data-btn="1" v-bind:class="{'btn-common common-color ordinary-btn': true, active: true}">普通订单</span>
+        <!-- <span data-btn="1" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color ordinary-btn': true, active: switchOption === false}">普通订单</span>
+        <span data-btn="2" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color bill-btn': true, active: switchOption === true}">账期订单</span> -->
         <a href="">
           <span class="btn-common all-list right-float">全部订单</span>
         </a>
@@ -98,7 +99,7 @@
         </div>
       </div>
       <!--账期订单-->
-      <div v-else data-menu="2" class="order-btn-detail">
+      <!-- <div v-else data-menu="2" class="order-btn-detail">
         <div class="btn-detail-common">
           <a href="">
             <div class="img-con">
@@ -140,7 +141,7 @@
             <div class="title">待付款</div> 
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
     <!--链接-->
     <div class="u-menu-link">
@@ -156,34 +157,34 @@
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/list.png" alt="">
-            <span class="title">常用清单</span>
+            <span class="title">常够清单</span>
           </div>
         </a>
       </div>
-      <div class="menu-link-con">
+      <!-- <div class="menu-link-con">
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/ask-price.png" alt="">
             <span class="title">询价单</span>
           </div>
         </a>
-      </div>
-      <div class="menu-link-con">
+      </div> -->
+      <!-- <div class="menu-link-con">
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/offer.png" alt="">
             <span class="title">报价单</span>
           </div>
         </a>
-      </div>
-      <div class="menu-link-con">
+      </div> -->
+      <!-- <div class="menu-link-con">
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/supplier.png" alt="">
             <span class="title">供应商</span>
           </div>
         </a>
-      </div>
+      </div> -->
     </div>
     <!--服务相关-->
     <div class="u-service">
