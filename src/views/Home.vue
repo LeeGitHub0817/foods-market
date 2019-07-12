@@ -409,6 +409,9 @@ export default {
     .common-quickbtn{
       display: inline-block;
       text-align: center;
+      .common-title{
+        font-size: 28px;
+      }
       .common-btn-img{
         display: block;
         width: 120px;
@@ -677,6 +680,7 @@ export default {
           margin-top: 10px;
           width: 100%;
           min-height: 70px;
+          font-size: 26px;
         }
         .price-con{
           margin-top: 10px;

@@ -433,8 +433,8 @@ export default {
                 .symbol{
                   font-size: 24px;
                 }
-                .price-num{
-                  font-size: 28px;
+                .price{
+                  font-size: 26px;
                 }
                 .unit{
                   color: #999;
@@ -467,6 +467,7 @@ export default {
                   font-size: 28px;
                   background-color: #f8f8f8;
                   margin: 0 10px;
+                  vertical-align: middle;
                 }
                 .common{
                   display: inline-block;

@@ -456,6 +456,10 @@ export default {
         .checkall-container{
           display: inline-block;
           vertical-align: middle;
+          .text{
+            font-size: 26px;
+            vertical-align: middle;
+          }
           .check-all-icon{
             display: inline-block;
             vertical-align: middle;
@@ -477,6 +481,7 @@ export default {
         .total-price-container{
           display: inline-block;
           vertical-align: middle;
+          font-size: 26px;
           .total-price{
             color: #FF1F1F;
           }
@@ -489,6 +494,9 @@ export default {
         text-align: center;
         color: #fff;
         background-color: #1dce7e;
+        .submit-text{
+          font-size: 26px;
+        }
       }
     }
     .nothing{
