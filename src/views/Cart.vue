@@ -372,17 +372,17 @@ export default {
                 justify-content: space-between;
                 align-items: center;
                 .price{
+                  font-size: 28px;
                   .currency{
                     color: #FF1F1F;
                   }
                   .price-num{
                     color: #FF1F1F;
-                    font-size: 30px;
                   }
                   .unit{
                     color: #999;
                   }
-                }
+                }OrderSubmit
                 .buy-btn-box{
                   font-size: 0;
                   .btn-common{
@@ -402,6 +402,7 @@ export default {
                     height: 50px;
                     width: 80px;
                     line-height: 50px;
+                    font-size: 26px;
                   }
                   .reduce-btn{
                     margin-right: 10px;

@@ -9,7 +9,7 @@
   body{
     font-family: 'Helvetica Neue', 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased; /*去除锯齿*/
-    -moz-osx-font-smoothing: grayscale; 
+    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*移动端手指触摸是反馈的背景颜色，此处设置无*/
   }
   body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,code,del,em,dl,dt,dd,ol,ul,li,input,fieldset,form,legend,
@@ -95,5 +95,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  /*公告背景色*/
+  .common-bac{
+    background-color: #F1F4F7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
   }
 </style>

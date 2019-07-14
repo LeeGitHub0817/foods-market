@@ -4,42 +4,42 @@
     <div class="u-userinfo">
       <div class="user-con clear-flow">
         <div class="user-type">
-          <div class="avatar"><img src="../assets/img/user/default_avatar.png" alt="头像"></div>
+          <div class="avatar"><img src="../assets/img/user/default_avatar.jpg" alt="头像"></div>
           <div class="name-con">
             <h1 class="name">联合国际</h1>
             <div class="type">合约客户</div>
           </div>
-          <div class="account-set">
+          <!-- <div class="account-set">
             <a class="set-link" href="">管理</a>
-          </div>
+          </div> -->
         </div>
         <div class="user-bill">
           <div class="bill-one clear-float">
             <a href="">
-              <h2 class="one-mine left-float">我的账户</h2>
+              <h2 class="one-mine left-float">个人信息</h2>
               <div class="one-balance right-float">
-                <span class="desc">余额:</span>
-                <span class="number">￥2785.00</span>
+                <!-- <span class="desc">余额:</span>
+                <span class="number">￥2785.00</span> -->
               </div>
             </a>
           </div>
           <div class="bill-two">
             <div class="two-common cur-month">
-              <div class="common-title">本月待付</div>
-              <div class="common-number">563.00</div>
+              <div class="common-title">浏览记录</div>
+              <div class="common-number">56</div>
             </div>
             <div class="two-common now-debt">
-                <div class="common-title">本月待付</div>
-                <div class="common-number">4357.00</div>
+                <div class="common-title">商品关注</div>
+                <div class="common-number">96</div>
             </div>
             <div class="two-common next-month">
-                <div class="common-title">本月待付</div>
-                <div class="common-number">999954.00</div>
+                <div class="common-title">订单总数</div>
+                <div class="common-number">100</div>
             </div>
           </div>
-          <div class="check-all">
+          <!-- <div class="check-all">
             <a class="check-link" href="">查看账单明细</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -177,14 +177,14 @@
           </div>
         </a>
       </div> -->
-      <!-- <div class="menu-link-con">
+      <div class="menu-link-con">
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/supplier.png" alt="">
-            <span class="title">供应商</span>
+            <span class="title">安全中心</span>
           </div>
         </a>
-      </div> -->
+      </div>
     </div>
     <!--服务相关-->
     <div class="u-service">
@@ -346,6 +346,7 @@ export default {
             vertical-align: middle;
             width: 33.3%;
             box-sizing: border-box;
+            text-align: center;
             &:not(:first-child){
               padding-left: 25px;
               border-left: 1px solid transparent;
@@ -383,7 +384,7 @@ export default {
   .u-order{
     background-color: #fff;
     .order-nothing{
-      height: 262.5px;
+      height: 150px;
     }
     .order-btn{
       font-size: 32px;

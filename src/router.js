@@ -15,6 +15,9 @@ const Retrieve = r => require.ensure([], () => r(require('./views/user/Retrieve'
 const ProductDetail = r => require.ensure([], () => r(require('./views/ProductDetail')), 'productdetail');
 const ConfirmOrder = r => require.ensure([], () => r(require('./views/orders/ConfirmOrder')), 'confirmorder');
 const EditAddress = r => require.ensure([], () => r(require('./views/user/EditAddress')), 'editaddress');
+const ManageAddress = r => require.ensure([], () => r(require('./views/user/ManageAddress')), 'manageaddress');
+const CashierDesk = r => require.ensure([], () => r(require('./views/orders/CashierDesk')), 'cashierdesk');
+const OrderSubmit = r => require.ensure([], () => r(require('./views/orders/OrderSubmit')), 'ordersubmit');
 
 Vue.use(Router)
 
@@ -86,6 +89,21 @@ export default new Router({
           path: '/editaddress',
           name: 'editconfirm',
           component: EditAddress
+        },
+        {
+          path: '/manageaddress',
+          name: 'manageaddress',
+          component: ManageAddress
+        },
+        {
+          path: '/cashierdesk',
+          name: 'cashierdesk',
+          component: CashierDesk
+        },
+        {
+          path: '/ordersubmit',
+          name: 'ordersubmit',
+          component: OrderSubmit
         }
       ]
     }
