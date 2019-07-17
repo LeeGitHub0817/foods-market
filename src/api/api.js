@@ -34,5 +34,15 @@ export default {
                 reject(err);
             })
         })
+    },
+    //主页产品推荐数据
+    getIndexReccom(){
+        return new Promise((resolve, reject) => {
+            axios.get('/index/recommand').then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            })
+        })
     }
 }

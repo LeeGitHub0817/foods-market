@@ -264,6 +264,7 @@
 //引入swiper
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.min.css";
+import api from '../api/api';
 
 export default {
   data: function(){
@@ -307,6 +308,12 @@ export default {
       pagination: {
         el: ".swiper-pagination-good"
       }
+    })
+
+    api.getIndexReccom().then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
     })
   }
 }
