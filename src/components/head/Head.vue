@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     goBack(){
-      window.location.history.length > 1 ? this.$router.go(-1) : this.$router.replace('/');
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.replace('/');
     }
   },
 }
