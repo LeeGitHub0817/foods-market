@@ -76,26 +76,26 @@
         <div class="btn-detail-common">
           <a href="">
             <div class="img-con">
+              <img src="../assets/img/user/five.png" alt="">
+            </div>
+            <div class="title">待收货</div> 
+          </a>
+        </div>
+        <div class="btn-detail-common">
+          <a href="">
+            <div class="img-con">
               <img src="../assets/img/user/six.png" alt="">
             </div>
-            <div class="title">实发数</div>
-          </a>  
+            <div class="title">已完成</div> 
+          </a>
         </div>
         <div class="btn-detail-common">
           <a href="">
             <div class="img-con">
               <img src="../assets/img/user/four.png" alt="">
             </div>
-            <div class="title">待付尾款</div>
+            <div class="title">已取消</div>
           </a>   
-        </div>
-        <div class="btn-detail-common">
-          <a href="">
-            <div class="img-con">
-              <img src="../assets/img/user/five.png" alt="">
-            </div>
-            <div class="title">待收货</div> 
-          </a>
         </div>
       </div>
       <!--账期订单-->

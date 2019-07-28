@@ -4,11 +4,11 @@ import Router from 'vue-router'
 import App from "./App.vue";
 //引入自己定义的组件
 //使用懒加载方案，实现按需加载
-const Home = r => require.ensure([], () => r(require('./views/Home.vue')), 'home');
-const Types = r => require.ensure([], () => r(require('./views/Types.vue')), 'types');
+const Home = r => require.ensure([], () => r(require('./views/Home')), 'home');
+const Types = r => require.ensure([], () => r(require('./views/Types')), 'types');
 const CommonList = r => require.ensure([], () => r(require('./views/CommonList')), 'commonlist');
-const Cart = r => require.ensure([], () => r(require('./views/Cart.vue')), 'cart');
-const UserCenter = r => require.ensure([], () => r(require('./views/UserCenter.vue')), 'usercenter');
+const Cart = r => require.ensure([], () => r(require('./views/Cart')), 'cart');
+const UserCenter = r => require.ensure([], () => r(require('./views/UserCenter')), 'usercenter');
 const Login = r => require.ensure([], () => r(require('./views/user/Login')), 'login');
 const Register = r => require.ensure([], () => r(require('./views/user/Register')), 'register');
 const Retrieve = r => require.ensure([], () => r(require('./views/user/Retrieve')), 'retrieve');
@@ -18,6 +18,8 @@ const EditAddress = r => require.ensure([], () => r(require('./views/user/EditAd
 const ManageAddress = r => require.ensure([], () => r(require('./views/user/ManageAddress')), 'manageaddress');
 const CashierDesk = r => require.ensure([], () => r(require('./views/orders/CashierDesk')), 'cashierdesk');
 const OrderSubmit = r => require.ensure([], () => r(require('./views/orders/OrderSubmit')), 'ordersubmit');
+const OrderList = r => require.ensure([], () => r(require('./views/orders/OrderList')), 'orderlist');
+const OrderDetail = r => require.ensure([], () => r(require('./views/orders/OrderDetail')), 'orderdetail');
 
 Vue.use(Router)
 
@@ -104,6 +106,16 @@ export default new Router({
           path: '/ordersubmit',
           name: 'ordersubmit',
           component: OrderSubmit
+        },
+        {
+          path: '/orderlist',
+          name: 'orderlist',
+          component: OrderList
+        },
+        {
+          path: '/orderdetail',
+          name: 'orderdetail',
+          component: OrderDetail
         }
       ]
     }
