@@ -20,11 +20,11 @@ Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast).use(Bu
 
 //手机上判断底部按钮位置（弹出键盘时会把底部fixed部分顶上去）
 var nowHeight = window.innerHeight;
-window.addEventListener('resize', function(){
-  if(document.getElementById('fixed_part')){
-    if(window.innerHeight < nowHeight){
+window.addEventListener('resize', function() {
+  if(document.getElementById('fixed_part')) {
+    if(window.innerHeight < nowHeight) {
       document.getElementById('fixed_part').style.position = 'static';
-    }else{
+    }else {
       document.getElementById('fixed_part').style.position = 'fixed';
     }
   }
