@@ -41,6 +41,40 @@
           <p class="address">地址：重庆市渝北区城区龙华大道107号财信城市国际3栋</p>
         </div>
       </div>
+
+      <div class="order-info-wrap">
+        <div class="order-info-item">
+          <span class="item-left">订单编号：</span>
+          <span class="item-right">201908171431</span>
+        </div>
+        <div class="order-info-item">
+          <span class="item-left">下单时间：</span>
+          <span class="item-right">2019-08-17 14:36</span>
+        </div>
+        <div class="order-info-item">
+          <span class="item-left">支付方式：</span>
+          <span class="item-right">在线支付</span>
+        </div>
+        <div class="order-info-item">
+          <span class="item-left">支付时间：</span>
+          <span class="item-right">2019-08-17 14:38</span>
+        </div>
+      </div>
+
+      <div class="price-info-wrap">
+        <div class="price-info-item flex-between-center">
+          <span class="item-left">商品总额</span>
+          <span class="item-right">￥399.00</span>
+        </div>
+        <div class="price-info-item flex-between-center">
+          <span class="item-left">运费</span>
+          <span class="item-right">￥10.00</span>
+        </div>
+        <div class="price-info-item flex-between-center special-item">
+          <span class="item-left"></span>
+          <span class="item-right">需付款：<span class="price-num">￥400.00</span></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -117,7 +151,7 @@ export default {
   }
 
   .user-info-wrap {
-    margin-top: 32px;
+    margin-top: 22px;
     background-color: #fff;
     box-sizing: border-box;
     padding: 24px 32px;
@@ -142,6 +176,47 @@ export default {
     }
     .address {
       font-size: 26px;
+    }
+  }
+
+  .order-info-wrap {
+    margin-top: 22px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    .order-info-item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .order-info-item {
+      .item-left {
+        font-size: 28px;
+        font-weight: 500;
+      }
+      .item-right {
+        font-size: 28px;
+        font-weight: 400;
+        color: #989898;
+      }
+    }
+  }
+
+  .price-info-wrap {
+    margin-top: 22px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    .price-info-item {
+      font-size: 28px;
+    }
+    .price-info-item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .special-item {
+      padding: 20px 0;
+      border-top: 1px solid #f4f4f4;
+      .price-num {
+        color: #fd3b21;
+      }
     }
   }
 </style>
