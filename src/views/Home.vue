@@ -78,90 +78,45 @@
       </div>
       <div class="swiper-container-good">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div v-for="(item, index) in recomData" :key="index" class="swiper-slide">
             <div class="product-box">
               <!--左边部分-->
               <div class="product-box-left">
                 <div class="product-left-img">
-                  <img class="product-img-show" src="static/index/5.png" alt="精品产品">
+                  <img class="product-img-show" :src="item[0].img_link" alt="精品产品">
                 </div>
-                <div class="product-left-title">散装精品三文鱼</div>
+                <div class="product-left-title">{{ item[0].name }}</div>
                 <div class="product-left-price">
                   <span class="currency-symbol">￥</span>
-                  <span class="price-number">42.00</span>
-                  <span class="unit-symbol">/斤</span>
+                  <span class="price-number">{{ item[0].price.toFixed(2) }}</span>
+                  <span class="unit-symbol">/{{ item[0].unit }}</span>
                 </div>
               </div>
               <!--右边部分-->
               <div class="product-box-right">
                 <div class="product-right-part">
                   <div class="product-right-img">
-                    <img class="product-img-show" src="static/index/4.png" alt="精品产品">
+                    <img class="product-img-show" :src="item[1].img_link" alt="精品产品">
                   </div>
                   <div class="product-right-info">
-                    <div class="product-right-title">三点蟹鲜活4-12头三点蟹鲜活4-12头</div>
+                    <div class="product-right-title">{{ item[1].name }}</div>
                     <div class="product-right-price">
                       <span class="currency-symbol">￥</span>
-                      <span class="price-number">27.00</span>
-                      <span class="unit-symbol">/盒</span>
+                      <span class="price-number">{{ item[1].price.toFixed(2) }}</span>
+                      <span class="unit-symbol">/{{ item[1].unit }}</span>
                     </div>
                   </div>
                 </div>
                 <div class="product-right-part">
                   <div class="product-right-img">
-                    <img class="product-img-show" src="static/index/6.png" alt="精品产品">
+                    <img class="product-img-show" :src="item[2].img_link" alt="精品产品">
                   </div>
                   <div class="product-right-info">
-                    <div class="product-right-title">白虾</div>
+                    <div class="product-right-title">{{ item[2].name }}</div>
                     <div class="product-right-price">
                       <span class="currency-symbol">￥</span>
-                      <span class="price-number">34.90</span>
-                      <span class="unit-symbol">/斤</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-box">
-              <!--左边部分-->
-              <div class="product-box-left">
-                <div class="product-left-img">
-                  <img class="product-img-show" src="static/index/5.png" alt="精品产品">
-                </div>
-                <div class="product-left-title">散装精品三文鱼</div>
-                <div class="product-left-price">
-                  <span class="currency-symbol">￥</span>
-                  <span class="price-number">42.00</span>
-                  <span class="unit-symbol">/斤</span>
-                </div>
-              </div>
-              <!--右边部分-->
-              <div class="product-box-right">
-                <div class="product-right-part">
-                  <div class="product-right-img">
-                    <img class="product-img-show" src="static/index/4.png" alt="精品产品">
-                  </div>
-                  <div class="product-right-info">
-                    <div class="product-right-title">三点蟹鲜活4-12头三点蟹鲜活4-12头</div>
-                    <div class="product-right-price">
-                      <span class="currency-symbol">￥</span>
-                      <span class="price-number">27.00</span>
-                      <span class="unit-symbol">/盒</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="product-right-part">
-                  <div class="product-right-img">
-                    <img class="product-img-show" src="static/index/6.png" alt="精品产品">
-                  </div>
-                  <div class="product-right-info">
-                    <div class="product-right-title">白虾</div>
-                    <div class="product-right-price">
-                      <span class="currency-symbol">￥</span>
-                      <span class="price-number">34.90</span>
-                      <span class="unit-symbol">/斤</span>
+                      <span class="price-number">{{ item[2].price.toFixed(2) }}</span>
+                      <span class="unit-symbol">/{{ item[2].unit }}</span>
                     </div>
                   </div>
                 </div>
@@ -177,37 +132,15 @@
     <div class="h-newgood-container">
       <div class="newgood-head">新品上市</div>
       <div class="newgood-box">
-        <div class="newgood-part">
+        <div v-for="item in newData" :key="item.pid" class="newgood-part">
           <div class="img-con">
-            <img class="img-show" src="static/index/7.png" alt="新品上市">
+            <img class="img-show" :src="item.img_link" alt="新品上市">
           </div>
-          <div class="title-con">法式鲜鹅肝（生鲜菜牌）法式鲜鹅肝（生鲜菜牌）</div>
+          <div class="title-con">{{ item.name }}</div>
           <div class="price-con">
             <span class="currency-symbol">￥</span>
-            <span class="price-number">149.98</span>
-            <span class="unit-symbol">/斤</span>
-          </div>
-        </div>
-        <div class="newgood-part">
-          <div class="img-con">
-            <img class="img-show" src="static/index/8.png" alt="新品上市">
-          </div>
-          <div class="title-con">芝士年糕</div>
-          <div class="price-con">
-            <span class="currency-symbol">￥</span>
-            <span class="price-number">27.98</span>
-            <span class="unit-symbol">/斤</span>
-          </div>
-        </div>
-        <div class="newgood-part">
-          <div class="img-con">
-            <img class="img-show" src="static/index/9.png" alt="新品上市">
-          </div>
-          <div class="title-con">章鱼足（八爪足）</div>
-          <div class="price-con">
-            <span class="currency-symbol">￥</span>
-            <span class="price-number">49.98</span>
-            <span class="unit-symbol">/斤</span>
+            <span class="price-number">{{ item.price.toFixed(2) }}</span>
+            <span class="unit-symbol">/{{ item.unit }}</span>
           </div>
         </div>
       </div>
@@ -218,37 +151,15 @@
     <div class="h-newgood-container">
       <div class="newgood-head">热销商品</div>
       <div class="newgood-box">
-        <div class="newgood-part">
+        <div v-for="item in hotData" :key="item.pid" class="newgood-part">
           <div class="img-con">
-            <img class="img-show" src="static/index/7.png" alt="新品上市">
+            <img class="img-show" :src="item.img_link" alt="新品上市">
           </div>
-          <div class="title-con">法式鲜鹅肝（生鲜菜牌）法式鲜鹅肝（生鲜菜牌）</div>
+          <div class="title-con">{{ item.name }}</div>
           <div class="price-con">
             <span class="currency-symbol">￥</span>
-            <span class="price-number">149.98</span>
-            <span class="unit-symbol">/斤</span>
-          </div>
-        </div>
-        <div class="newgood-part">
-          <div class="img-con">
-            <img class="img-show" src="static/index/8.png" alt="新品上市">
-          </div>
-          <div class="title-con">芝士年糕</div>
-          <div class="price-con">
-            <span class="currency-symbol">￥</span>
-            <span class="price-number">27.98</span>
-            <span class="unit-symbol">/斤</span>
-          </div>
-        </div>
-        <div class="newgood-part">
-          <div class="img-con">
-            <img class="img-show" src="static/index/9.png" alt="新品上市">
-          </div>
-          <div class="title-con">章鱼足（八爪足）</div>
-          <div class="price-con">
-            <span class="currency-symbol">￥</span>
-            <span class="price-number">49.98</span>
-            <span class="unit-symbol">/斤</span>
+            <span class="price-number">{{ item.price.toFixed(2) }}</span>
+            <span class="unit-symbol">/{{ item.unit }}</span>
           </div>
         </div>
       </div>
@@ -269,53 +180,115 @@ import api from '../api/api';
 export default {
   data: function(){
     return {
-
+      recomData: [], // 推荐商品数据
+      newData: [], // 新品上市数据
+      hotData: [], // 热销商品数据
+      temp_array: [], // 存放临时数据s
     }
   },
   mounted: function(){
-    //轮播图
-    var homeBanner = new Swiper(".swiper-container", {
-      direction: "horizontal",
-        autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false
-        },
-        loop: false,
-        pagination: {
-          el: ".swiper-pagination"
-        }
-    });
-    //新闻轮播
-    var newBanner = new Swiper(".swiper-container-news", {
-      direction: "vertical",
-        autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false
-        },
-        loop: false,
-    });
-    //精品推荐滑动轮播
-    var goodBanner = new Swiper(".swiper-container-good", {
-      direction: "horizontal",
-      autoplay: {
-        delay: 10000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination-good"
-      }
-    })
+    this.init();
+  },
+  methods: {
+    init() {
+      api.common_request('index/carousel').then((res) => {
+        console.log(res)
+      }).catch((err) => {
+        alert('in-1-err')
+        alert(JSON.stringify(err));
+      })
+      // 精品推荐
+      let recomPromise = new Promise((resolve, reject) => {
+        api.common_request('/index/recommand').then((res) => {
+          resolve(res)
+        }).catch((err) => {
+          console.log(err);
+        });
+      });
+      // 新品上市
+      let newPromise = new Promise((resolve, reject) => {
+        api.common_request('/index/newproduct').then((res) => {
+          resolve(res);
+        }).catch((err) => {
+          console.log(err);
+        });
+      });
+      
+      // 热销商品
+      let hotPromise = new Promise((resolve, reject) => {
+        api.common_request('/index/hotproduct').then((res) => {
+          resolve(res);
+        }).catch((err) => {
+          console.log(err);
+        });
+      });
 
-    api.getIndexReccom().then((res) => {
-      console.log(res);
-    }).catch((err) => {
-      console.log(err);
-    })
-  }
+      //数据合集
+      Promise.all([recomPromise, newPromise, hotPromise]).then((_res) => {
+        console.log(_res);
+        // 对精品推荐的数据做一下处理
+        let temp = [];
+        let count = 0;
+        for(let item of _res[0].data.data) {
+          temp.push(item);
+          count++;
+          if(count % 3 == 0) {
+            this.recomData.push(JSON.parse(JSON.stringify(temp))); // 这个地方需要深拷贝一下，不然下面的temp.length = 0会把数据去除完
+            temp.length = 0;
+          }
+        }
+        console.log(this.recomData)
+        this.newData = _res[1].data.data;
+        this.hotData = _res[2].data.data;
+
+        // 这里由于Js机制问题用一个定时器来执行Swiper，不然Swiper会有问题。
+        setTimeout(() => {
+          this.bannerLoop();
+        }, 0);
+      }).catch((err) => {
+        alert('err')
+      })
+    },
+    // 封装一个轮播图函数
+    bannerLoop() {
+      //轮播图
+      let homeBanner = new Swiper(".swiper-container", {
+        direction: "horizontal",
+          autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+          },
+          loop: false,
+          pagination: {
+            el: ".swiper-pagination"
+          }
+      });
+      //新闻轮播
+      let newBanner = new Swiper(".swiper-container-news", {
+        direction: "vertical",
+          autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+          },
+          loop: false,
+      });
+      //精品推荐滑动轮播
+      let goodBanner = new Swiper(".swiper-container-good", {
+        direction: "horizontal",
+        autoplay: {
+          delay: 10000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination-good"
+        }
+      });
+    }
+  },
 }
 </script>
 
@@ -568,6 +541,10 @@ export default {
           padding: 0 32px;
           margin-top: 24px;
           box-sizing: border-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 290px;
         }
         .product-left-price{
           text-align: left;
