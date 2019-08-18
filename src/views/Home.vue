@@ -15,9 +15,9 @@
     <div class="h-banner-container">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img class="img-show" src="static/index/1.jpg" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="static/index/2.jpg" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="static/index/3.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="http://referenceerror.top/imgs/index_1.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="http://referenceerror.top/imgs/index_2.jpg" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="http://referenceerror.top/imgs/index_3.jpg" alt="轮播图"></div>
         </div>
         <!--分页器-->
         <div class="swiper-pagination"></div>
@@ -40,7 +40,7 @@
       <div class="common-quickbtn askprice">
         <a href="">
           <i class="common-btn-img askprice-img"></i>
-          <div class="common-title">产品询价</div>
+          <div class="common-title">购物车</div>
         </a>
       </div>
       <div class="common-quickbtn usercenter">
