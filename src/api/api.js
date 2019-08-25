@@ -43,6 +43,16 @@ export default {
             }).catch((err) => {
                 reject(err);
             });
-        })
+        });
+    },
+    // 商品详情页数据
+    getProduct(param) {
+        return new Promise((resolve, reject) => {
+            axios.get('/product/productdetail', param).then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            });
+        });
     }
 }

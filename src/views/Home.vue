@@ -81,7 +81,7 @@
           <div v-for="(item, index) in recomData" :key="index" class="swiper-slide">
             <div class="product-box">
               <!--左边部分-->
-              <div class="product-box-left">
+              <div @click="jumpToDetail(item[0].pid)" class="product-box-left">
                 <div class="product-left-img">
                   <img class="product-img-show" :src="item[0].img_link" alt="精品产品">
                 </div>
@@ -94,7 +94,7 @@
               </div>
               <!--右边部分-->
               <div class="product-box-right">
-                <div class="product-right-part">
+                <div @click="jumpToDetail(item[1].pid)" class="product-right-part">
                   <div class="product-right-img">
                     <img class="product-img-show" :src="item[1].img_link" alt="精品产品">
                   </div>
@@ -107,7 +107,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="product-right-part">
+                <div @click="jumpToDetail(item[2].pid)" class="product-right-part">
                   <div class="product-right-img">
                     <img class="product-img-show" :src="item[2].img_link" alt="精品产品">
                   </div>
@@ -132,7 +132,7 @@
     <div class="h-newgood-container">
       <div class="newgood-head">新品上市</div>
       <div class="newgood-box">
-        <div v-for="item in newData" :key="item.pid" class="newgood-part">
+        <div v-for="item in newData" :key="item.pid" @click="jumpToDetail(item.pid)" class="newgood-part">
           <div class="img-con">
             <img class="img-show" :src="item.img_link" alt="新品上市">
           </div>
@@ -151,7 +151,7 @@
     <div class="h-newgood-container">
       <div class="newgood-head">热销商品</div>
       <div class="newgood-box">
-        <div v-for="item in hotData" :key="item.pid" class="newgood-part">
+        <div v-for="item in hotData" :key="item.pid" @click="jumpToDetail(item.pid)" class="newgood-part">
           <div class="img-con">
             <img class="img-show" :src="item.img_link" alt="新品上市">
           </div>
@@ -191,12 +191,6 @@ export default {
   },
   methods: {
     init() {
-      api.common_request('index/carousel').then((res) => {
-        console.log(res)
-      }).catch((err) => {
-        alert('in-1-err')
-        alert(JSON.stringify(err));
-      })
       // 精品推荐
       let recomPromise = new Promise((resolve, reject) => {
         api.common_request('/index/recommand').then((res) => {
@@ -205,6 +199,7 @@ export default {
           console.log(err);
         });
       });
+
       // 新品上市
       let newPromise = new Promise((resolve, reject) => {
         api.common_request('/index/newproduct').then((res) => {
@@ -246,7 +241,7 @@ export default {
           this.bannerLoop();
         }, 0);
       }).catch((err) => {
-        alert('err')
+        console.log('err');
       })
     },
     // 封装一个轮播图函数
@@ -287,6 +282,10 @@ export default {
           el: ".swiper-pagination-good"
         }
       });
+    },
+    // 跳转函数
+    jumpToDetail(pid) {
+      this.$router.push({path: 'productdetail', query: {pid: pid}});
     }
   },
 }

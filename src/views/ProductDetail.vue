@@ -7,9 +7,9 @@
     <div class="pd-banner-wrap">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img class="img-show" src="static/product_detail.png" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="static/product_detail.png" alt="轮播图"></div>
-          <div class="swiper-slide"><img class="img-show" src="static/product_detail.png" alt="轮播图"></div>
+          <div v-for="(item, index) in detailData[1]" :key="index" class="swiper-slide"><img class="img-show" :src="item.img_link" alt="轮播图"></div>
+          <!-- <div class="swiper-slide"><img class="img-show" src="static/product_detail.png" alt="轮播图"></div>
+          <div class="swiper-slide"><img class="img-show" src="static/product_detail.png" alt="轮播图"></div> -->
         </div>
         <!--分页器-->
         <div class="swiper-pagination"></div>
@@ -17,10 +17,10 @@
     </div>
     <!--商品信息-->
     <div class="pd-detail-wrap">
-      <div class="detail-title medium-font-500 multiline-ellipsis">八爪鱼海鲜鲜活水产冷冻小章鱼迷你八抓鱼章鱼足长腿大爆头1斤装</div>
-      <p class="detail-desc regular-font-400">鲜活加工，低温速冻，鲜嫩劲道，紧致弹牙！鲜活加工，低温速冻，鲜嫩劲道，紧致弹牙！鲜活加工，低温速冻，鲜嫩劲道，紧致弹牙！鲜活加工，低温速冻，鲜嫩劲道，紧致弹牙！</p>
+      <div class="detail-title medium-font-500 multiline-ellipsis">{{ detailData[0].name }}</div>
+      <p class="detail-desc regular-font-400">{{ detailData[0].description }}</p>
       <div class="price-fav-box flex-between-center">
-        <div class="price-wrap semibold-font-600"><span class="curr-symbol">￥</span>42.00<span class="unit-symbol regular-font-400">/斤</span></div>
+        <div class="price-wrap semibold-font-600"><span class="curr-symbol">￥</span>{{ detailData[0].price.toFixed(2)}}<span class="unit-symbol regular-font-400">/{{ detailData[0].unit }}</span></div>
         <div @click="handleCollect" class="favorite-wrap flex-start-center">
           <i :class="{'favorite-icon': true, 'favorite-icon-ok': isCollect}"></i>
           <span :class="{'favorite-desc': true, 'regular-font-400': true, 'favorite-desc-ok': isCollect}">加入收藏</span>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <!--商品规格-->
-    <div class="pd-paramer-wrap">
+    <!-- <div class="pd-paramer-wrap">
       <div class="paramer-box">
         <p class="paramer-title regular-font-400">规格</p>
         <ul class="param-detail-outter flex-start-center">
@@ -37,7 +37,7 @@
           <li class="param-inner regular-font-400">小号</li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <!--商品介绍-->
     <div class="pd-show-wraper">
       <div class="show-title-box flex-all-center">
@@ -46,7 +46,7 @@
         <span class="title-line"></span>
       </div>
       <div class="show-img-box">
-        <img class="show-img" src="static/detail.png">
+        <img class="show-img" :src="detailData[0].detail_img">
       </div>
     </div>
     <!--占位-->
@@ -73,30 +73,49 @@
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.min.css";
 
+import api from '../api/api.js';
+
 export default {
   name: "producdetail",
   data: function(){
     return {
-      isCollect: false
+      detailData: [{price: 0},[{}]], // 产品数据
+      isCollect: false // 收藏按钮切换
     }
   },
   mounted() {
-    var banner = new Swiper(".swiper-container", {
-      direction: "horizontal",
-      autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
-      },
-      loop: false,
-      pagination: {
-        el: ".swiper-pagination"
-      }
-    })
+    this.init();
   },
   methods: {
+    // 初始化函数
+    init() {
+      let param = {params: {
+        pid: this.$route.query.pid
+      }};
+      api.getProduct(param).then((res) => {
+        console.log(res);
+        this.detailData = res.data;
+        console.log(this.detailData)
+        setTimeout(() => {
+          let banner = new Swiper(".swiper-container", {
+            direction: "horizontal",
+            autoplay: {
+              delay: 3000,
+              stopOnLastSlide: false,
+              disableOnInteraction: false
+            },
+            loop: false,
+            pagination: {
+              el: ".swiper-pagination"
+            }
+          });
+        }, 0)
+      }).catch((err) => {
+        console.log(err);
+      })
+    },
     //点击加入收藏按钮
-    handleCollect(){
+    handleCollect() {
       this.isCollect = !this.isCollect;
     },
   },
@@ -115,6 +134,10 @@ export default {
     width: 750px;
     height: 750px;
     .swiper-container{
+      .swiper-slide {
+        width: 750px;
+        height: 750px;
+      }
       .img-show{
         width: 750px;
         height: 750px;
@@ -212,6 +235,7 @@ export default {
     }
   }
   .pd-show-wraper{
+    margin-top: 24px;
     .show-title-box{
       padding: 24px 0;
       background-color: #fff;
