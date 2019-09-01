@@ -11,213 +11,69 @@
     <!--一级导航菜单部分-->
     <div class="type-navmenu-box">
       <ul class="navmenu-list">
-        <li class="navmenu-item active">活鲜水产</li>
-        <li class="navmenu-item">冷冻食材</li>
-        <li class="navmenu-item">粮油干调</li>
-        <li class="navmenu-item">蔬菜水果</li>
-        <li class="navmenu-item">新鲜肉禽</li>
-        <li class="navmenu-item">鲜花野味</li>
-        <li class="navmenu-item">酒水茶叶</li>
-        <li class="navmenu-item">珍品</li>
+        <li @click="handleFirstOrder(1)" :class="{'navmenu-item': true, 'active': firstOrderTag === 1}">活鲜水产</li>
+        <li @click="handleFirstOrder(2)" :class="{'navmenu-item': true, 'active': firstOrderTag === 2}">冷冻食材</li>
+        <li @click="handleFirstOrder(3)" :class="{'navmenu-item': true, 'active': firstOrderTag === 3}">粮油干调</li>
+        <li @click="handleFirstOrder(4)" :class="{'navmenu-item': true, 'active': firstOrderTag === 4}">蔬菜水果</li>
+        <li @click="handleFirstOrder(5)" :class="{'navmenu-item': true, 'active': firstOrderTag === 5}">鲜花野味</li>
+        <li @click="handleFirstOrder(6)" :class="{'navmenu-item': true, 'active': firstOrderTag === 6}">珍品</li>
       </ul>
       <div class="dropdown-btn ignore"><em class="btn-icon" v-on:click="showCategory()"></em></div>
     </div>
     <!--二级菜单和产品详情-->
     <div class="type-list-box">
-      <ul class="second-menu" :style="{ height: listHeight + 'px' }">
-        <li class="menu-item active">鱼</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
-        <li class="menu-item">虾</li>
-        <li class="menu-item">蟹</li>
-        <li class="menu-item">贝</li>
-        <li class="menu-item">螺</li>
-        <li class="menu-item">鸡</li>
+      <ul v-if="firstOrderTag === 1" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(1, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">鱼</li>
+        <li @click="handleSecondOrder(1, 2)" :class="{'menu-item': true, 'active': secondOriderTag === 2}">虾</li>
+        <li @click="handleSecondOrder(1, 3)" :class="{'menu-item': true, 'active': secondOriderTag === 3}">蟹</li>
+        <li @click="handleSecondOrder(1, 4)" :class="{'menu-item': true, 'active': secondOriderTag === 4}">贝</li>
       </ul>
+      <ul v-if="firstOrderTag === 2" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(2, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">猪</li>
+        <li @click="handleSecondOrder(2, 2)" :class="{'menu-item': true, 'active': secondOriderTag === 2}">鸭</li>
+        <li @click="handleSecondOrder(2, 3)" :class="{'menu-item': true, 'active': secondOriderTag === 3}">鱼</li>
+        <li @click="handleSecondOrder(2, 4)" :class="{'menu-item': true, 'active': secondOriderTag === 4}">虾</li>
+        <li @click="handleSecondOrder(2, 5)" :class="{'menu-item': true, 'active': secondOriderTag === 5}">鹅</li>
+      </ul>
+      <ul v-if="firstOrderTag === 3" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(3, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">香料</li>
+        <li @click="handleSecondOrder(3, 2)" :class="{'menu-item': true, 'active': secondOriderTag === 2}">调味品</li>
+      </ul>
+      <ul v-if="firstOrderTag === 4" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(4, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">蔬菜</li>
+        <li @click="handleSecondOrder(4, 2)" :class="{'menu-item': true, 'active': secondOriderTag === 2}">水果</li>
+      </ul>
+      <ul v-if="firstOrderTag === 5" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(5, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">鲜花</li>
+        <li @click="handleSecondOrder(5, 2)" :class="{'menu-item': true, 'active': secondOriderTag === 2}">野味</li>
+      </ul>
+      <ul v-if="firstOrderTag === 6" class="second-menu" :style="{ height: listHeight + 'px' }">
+        <li @click="handleSecondOrder(6, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">补品</li>
+      </ul>
+
       <ul class="product-list" :style="{ height: listHeight + 'px' }">
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
+        <li @click="skipToDetail(item.pid)" v-for="item in typeItemData" :key="item.pid" class="product-item">
+          <div class="item-box">
+            <div class="img-box"><img class="img-show" :src="item.product_img" alt="产品图"></div>
             <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
+              <p class="product-name">{{ item.name }}</p>
               <div class="price-buy">
                 <div class="price-item">
                   <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
+                  <span class="price">{{ item.price.toFixed(2) }}</span>
+                  <span class="unit">/{{ item.unit }}</span>
                 </div>
                 <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
+                <div v-if="true" class="first-count"><i class="firstbuy-btn"></i></div>
                 <!--非第一次购买-->
-                <div class="not-first" >
+                <div v-if="false" class="not-first" >
                   <span class="reduce common"></span>
                   <input class="input-count" type="number" value="1">
                   <span class="add common"></span>
                 </div>
               </div>
             </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="product-item">
-          <a class="item-box" href="javascript:(void)">
-            <div class="img-box"><img class="img-show" src="static/index/9.png" alt="产品图"></div>
-            <div class="product-info-box">
-              <p class="product-name">美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼美味八爪鱼</p>
-              <div class="price-buy">
-                <div class="price-item">
-                  <span class="symbol">￥</span>
-                  <span class="price">25.98</span>
-                  <span class="unit">/斤</span>
-                </div>
-                <!--第一次购买-->
-                <div class="first-count" style="display:none;"><i class="firstbuy-btn"></i></div>
-                <!--非第一次购买-->
-                <div class="not-first" >
-                  <span class="reduce common"></span>
-                  <input class="input-count" type="number" value="1">
-                  <span class="add common"></span>
-                </div>
-              </div>
-            </div>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
@@ -229,15 +85,13 @@
           <p class="title">请选择具体分类</p>
           <em class="arrow-btn"></em>
         </div>
-        <ul class="category-name-box" @click.stop="switchItem($event)">
-          <li class="name-item"><span class="item active">活鲜水产</span></li>
-          <li class="name-item"><span class="item">冷冻食材</span></li>
-          <li class="name-item"><span class="item">粮油干调</span></li>
-          <li class="name-item"><span class="item">蔬菜水果</span></li>
-          <li class="name-item"><span class="item">新鲜肉禽</span></li>
-          <li class="name-item"><span class="item">活鲜水产</span></li>
-          <li class="name-item"><span class="item">酒水茶叶</span></li>
-          <li class="name-item"><span class="item">珍品</span></li>
+        <ul class="category-name-box" @click.stop>
+          <li class="name-item"><span @click="handleFirstOrder(1)" :class="{'item': true, 'active': firstOrderTag === 1}">活鲜水产</span></li>
+          <li class="name-item"><span @click="handleFirstOrder(2)" :class="{'item': true, 'active': firstOrderTag === 2}">冷冻食材</span></li>
+          <li class="name-item"><span @click="handleFirstOrder(3)" :class="{'item': true, 'active': firstOrderTag === 3}">粮油干调</span></li>
+          <li class="name-item"><span @click="handleFirstOrder(4)" :class="{'item': true, 'active': firstOrderTag === 4}">蔬菜水果</span></li>
+          <li class="name-item"><span @click="handleFirstOrder(5)" :class="{'item': true, 'active': firstOrderTag === 5}">鲜花野味</span></li>
+          <li class="name-item"><span @click="handleFirstOrder(6)" :class="{'item': true, 'active': firstOrderTag === 6}">珍品</span></li>
         </ul>
       </div>
     </div>
@@ -246,28 +100,66 @@
 </template>
 
 <script>
+import api from '../api/api.js';
+
 export default {
-  data: function(){
+  data: function() {
     return {
-      listHeight: 0, //中间内容高度
-      isShowCategory: false
+      listHeight: 0, // 中间内容高度
+      isShowCategory: false, // 是否显示第一级蒙版菜单
+
+      firstOrderTag: 1, // 一级菜单点击标记
+      secondOriderTag: 1, // 二级菜单点击标记
+
+      typeItemData: null, // 产品数据
+    }
+  },
+  watch: {
+    firstOrderTag() {
+      this.getTypeData();
     }
   },
   methods: {
-    //显示分类模态窗口
-    showCategory: function(){
+    // 跳转到产品详情
+    skipToDetail(value) {
+      this.$router.push({path: '/productdetail', query: {pid: value}});
+    },
+    // 点击一级菜单选项
+    handleFirstOrder(value) {
+      this.firstOrderTag = value;
+      this.secondOriderTag = 1;
+    },
+    // 点击二级菜单选项 
+    handleSecondOrder(value, item) {
+      this.firstOrderTag = value;
+      this.secondOriderTag = item;
+      this.getTypeData();
+    },
+    // 获取列表数据
+    getTypeData() {
+      let params = {params: {
+        firstID: this.firstOrderTag,
+        secondID: this.secondOriderTag
+      }};
+      api.getType(params).then((res) => {
+        console.log(res);
+        this.typeItemData = res.data.data;
+        console.log(this.typeItemData)
+      }).catch((err) => {
+        console.log(err);
+      })
+    },
+    // 显示分类模态窗口
+    showCategory: function() {
       this.isShowCategory = !this.isShowCategory;
     },
-    //隐藏分类模态窗口
-    hideCategory: function(){
+    // 隐藏分类模态窗口
+    hideCategory: function() {
       this.isShowCategory = !this.isShowCategory;
     },
-    //切换分类模态窗口的内容
-    switchItem: function(e){
-      console.log(e);
-    }
   },
-  mounted: function(){
+  mounted: function() {
+    this.getTypeData();
     //计算中间部分的高度
     this.listHeight = window.innerHeight - document.querySelector(".type-function-box").offsetHeight - 
       document.querySelector(".type-navmenu-box").offsetHeight - document.querySelector(".footer-container").offsetHeight -
