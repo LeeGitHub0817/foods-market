@@ -18,6 +18,12 @@ Vue.component('head-com', HeadCom);
 Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast).use(Button)
   .use(Switch).use(Popup).use(Area).use(AddressList).use(RadioGroup).use(Radio);
 
+// 引入组件
+import loaddingPop from './components/loading/load.js';
+// 在原型链上设置公告方法
+Vue.prototype.$loadding = loaddingPop;
+
+
 // 手机上判断底部按钮位置（弹出键盘时会把底部fixed部分顶上去）
 var nowHeight = window.innerHeight;
 window.addEventListener('resize', function() {

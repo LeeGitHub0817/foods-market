@@ -51,7 +51,7 @@
         <li @click="handleSecondOrder(6, 1)" :class="{'menu-item': true, 'active': secondOriderTag === 1}">补品</li>
       </ul>
 
-      <ul class="product-list" :style="{ height: listHeight + 'px' }">
+      <ul v-if="typeItemData !== null" class="product-list" :style="{ height: listHeight + 'px' }">
         <li @click="skipToDetail(item.pid)" v-for="item in typeItemData" :key="item.pid" class="product-item">
           <div class="item-box">
             <div class="img-box"><img class="img-show" :src="item.product_img" alt="产品图"></div>
@@ -64,9 +64,9 @@
                   <span class="unit">/{{ item.unit }}</span>
                 </div>
                 <!--第一次购买-->
-                <div v-if="true" class="first-count"><i class="firstbuy-btn"></i></div>
+                <div v-if="false" class="first-count"><i class="firstbuy-btn"></i></div>
                 <!--非第一次购买-->
-                <div v-if="false" class="not-first" >
+                <div v-if="true" class="not-first" >
                   <span class="reduce common"></span>
                   <input class="input-count" type="number" value="1">
                   <span class="add common"></span>
@@ -74,6 +74,10 @@
               </div>
             </div>
           </div>
+        </li>
+        <li v-if="typeItemData.length === 0" class="default-wrap">
+          <img class="default-img" src="../assets/img/common/default.png">
+          <p class="default-txt">亲，暂时没有内容哟~</p>
         </li>
       </ul>
     </div>
@@ -114,6 +118,13 @@ export default {
       typeItemData: null, // 产品数据
     }
   },
+  mounted: function() {
+    this.getTypeData();
+    //计算中间部分的高度
+    this.listHeight = window.innerHeight - document.querySelector(".type-function-box").offsetHeight - 
+      document.querySelector(".type-navmenu-box").offsetHeight - document.querySelector(".footer-container").offsetHeight -
+      parseFloat(window.getComputedStyle(document.querySelector(".type-navmenu-box")).marginBottom);
+  },
   watch: {
     firstOrderTag() {
       this.getTypeData();
@@ -137,15 +148,18 @@ export default {
     },
     // 获取列表数据
     getTypeData() {
+      this.$loadding.open();
       let params = {params: {
         firstID: this.firstOrderTag,
         secondID: this.secondOriderTag
       }};
       api.getType(params).then((res) => {
         console.log(res);
+        this.$loadding.close();
         this.typeItemData = res.data.data;
         console.log(this.typeItemData)
       }).catch((err) => {
+        this.$loadding.close();
         console.log(err);
       })
     },
@@ -157,13 +171,6 @@ export default {
     hideCategory: function() {
       this.isShowCategory = !this.isShowCategory;
     },
-  },
-  mounted: function() {
-    this.getTypeData();
-    //计算中间部分的高度
-    this.listHeight = window.innerHeight - document.querySelector(".type-function-box").offsetHeight - 
-      document.querySelector(".type-navmenu-box").offsetHeight - document.querySelector(".footer-container").offsetHeight -
-      parseFloat(window.getComputedStyle(document.querySelector(".type-navmenu-box")).marginBottom);
   }
 }
 </script>
@@ -264,9 +271,9 @@ export default {
     .second-menu{
       display: inline-block;
       vertical-align: top;
-      width: 20%;
+      width: 14%;
       box-sizing: border-box;
-      // border-right: 1px solid #f4f4f4;
+      border-right: 1px solid #f4f4f4;
       text-align: center;
       overflow-x: hidden;
       overflow-y: scroll;
@@ -283,11 +290,12 @@ export default {
     .product-list{
       display: inline-block;
       vertical-align: top;
-      width: 80%;
+      width: 86%;
       overflow-x: hidden;
       overflow-y: scroll;
       .product-item{
-        padding: 20px 25px 20px 0;
+        padding: 20px 25px 20px 25px;
+        box-sizing: border-box;
         .item-box{
           display: -webkit-box;
           .img-box{
@@ -449,6 +457,23 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .default-wrap {
+    text-align: center;
+    .default-img {
+      margin-top: 32px;
+      width: 146px;
+      height: 198px;
+    }
+    .default-txt {
+      font-size: 32px;
+      font-family: PingFangSC;
+      font-weight: 400;
+      color: #ccc;
+      line-height: 44px;
+      margin-top: 20px;
     }
   }
 </style>
