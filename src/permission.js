@@ -4,15 +4,24 @@
 */
 
 import router from './router';
-import api from './api/api.js';
 
 // 定义一个路由白名单
-const whiteList = ['/login', '/home', '/types', '/register', '/retrieve', '/productdetail'];
+const whiteList = ['/login', '/home', '/types', '/register', '/retrieve', '/productdetail', '/'];
 
 router.beforeEach((to, from, next) => {
-  let a = true;
-  
-  if(a){ // 如果登录了也直接跳转
+  // 读取cookie信息，看用户是否登录
+  let loginInfo = {
+    islogin: 'false'
+  };
+  if(document.cookie) {
+    let cookieArray = document.cookie.split(';')
+    for (let i = 0; i < cookieArray.length; i++) {
+      if(cookieArray[i].split('=')[0] === 'islogin') {
+        loginInfo.islogin = cookieArray[i].split('=')[1];
+      }
+    }
+  }
+  if(loginInfo.islogin === 'true'){ // 如果登录了也直接跳转
     next();
   }else { // 如果是在白名单里面直接跳转
     if(whiteList.indexOf(to.path) !== -1) {

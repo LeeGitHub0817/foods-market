@@ -20,7 +20,7 @@ Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast).use(Bu
 
 // 引入组件
 import loaddingPop from './components/loading/load.js';
-// 在原型链上设置公告方法
+// 在原型链上设置公共方法
 Vue.prototype.$loadding = loaddingPop;
 
 // 路由权限

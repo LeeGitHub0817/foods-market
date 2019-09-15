@@ -14,7 +14,7 @@
           </div> -->
         </div>
         <div class="user-bill">
-          <div class="bill-one clear-float">
+          <div @click="goUserInfo" class="bill-one clear-float">
             <a href="">
               <h2 class="one-mine left-float">个人信息</h2>
               <div class="one-balance right-float">
@@ -157,7 +157,7 @@
         <a class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/list.png" alt="">
-            <span class="title">常够清单</span>
+            <span class="title">常购清单</span>
           </div>
         </a>
       </div>
@@ -215,6 +215,9 @@ export default {
   methods: {
     switchOptionFunc: function(){
       this.switchOption = !this.switchOption;
+    },
+    goUserInfo() {
+      this.$router.push('/userinfo');
     }
   }
   

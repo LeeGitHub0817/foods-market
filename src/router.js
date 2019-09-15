@@ -20,6 +20,7 @@ const CashierDesk = r => require.ensure([], () => r(require('./views/orders/Cash
 const OrderSubmit = r => require.ensure([], () => r(require('./views/orders/OrderSubmit')), 'ordersubmit');
 const OrderList = r => require.ensure([], () => r(require('./views/orders/OrderList')), 'orderlist');
 const OrderDetail = r => require.ensure([], () => r(require('./views/orders/OrderDetail')), 'orderdetail');
+const UserInfo = r => require.ensure([], () => r(require('./views/user/UserInfo.vue')), 'userinfo');
 
 Vue.use(Router)
 
@@ -116,6 +117,11 @@ export default new Router({
           path: '/orderdetail',
           name: 'orderdetail',
           component: OrderDetail
+        },
+        {
+          path: '/userinfo',
+          name: 'userinfo',
+          component: UserInfo
         }
       ]
     }

@@ -5,6 +5,16 @@ axios.defaults.withCredentials = true;
 
 // 封装好的接口方法
 export default {
+    // 退出登录
+    logout() {
+        return new Promise((resolve, reject) => {
+            axios.get('/user/logout').then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            });
+        })
+    },
     // 判定用户是否已经登录
     isLogin() {
         return new Promise((resolve, reject) => {
