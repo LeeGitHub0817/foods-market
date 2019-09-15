@@ -50,9 +50,7 @@
         <span data-btn="1" v-bind:class="{'btn-common common-color ordinary-btn': true, active: true}">普通订单</span>
         <!-- <span data-btn="1" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color ordinary-btn': true, active: switchOption === false}">普通订单</span>
         <span data-btn="2" @click="switchOptionFunc()" v-bind:class="{'btn-common common-color bill-btn': true, active: switchOption === true}">账期订单</span> -->
-        <a href="">
-          <span class="btn-common all-list right-float">全部订单</span>
-        </a>
+        <span @click="skipToList" class="btn-common all-list right-float">全部订单</span>
       </div>
       <!--普通订单-->
       <div v-if="switchOption === false" data-menu="1" class="order-btn-detail">
@@ -146,7 +144,7 @@
     <!--链接-->
     <div class="u-menu-link">
       <div class="menu-link-con">
-        <a class="link-con" href="">
+        <a @click.prevent="skipToAddress" class="link-con" href="">
           <div class="img-title">
             <img class="img-icon" src="../assets/img/user/location.png" alt="">
             <span class="title">地址管理</span>
@@ -218,6 +216,12 @@ export default {
     },
     goUserInfo() {
       this.$router.push('/userinfo');
+    },
+    skipToList() {
+      this.$router.push('/orderlist');
+    },
+    skipToAddress() {
+      this.$router.push('/manageaddress');
     }
   }
   

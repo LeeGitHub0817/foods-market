@@ -25,29 +25,21 @@
     </div>
     <!--快捷按钮-->
     <div class="h-quickbtn-container">          
-      <div class="common-quickbtn order">
-        <a href="">        
-          <i class="common-btn-img order-img"></i>
-          <div class="common-title">我的订单</div>
-        </a>
+      <div @click="skipToList" class="common-quickbtn order">    
+        <i class="common-btn-img order-img"></i>
+        <div class="common-title">我的订单</div>
       </div>  
-      <div class="common-quickbtn list">
-        <a href="">
-          <i class="common-btn-img list-img"></i>
-          <div class="common-title">常用清单</div>
-        </a>
+      <div @click="skipToCommon" class="common-quickbtn list">
+        <i class="common-btn-img list-img"></i>
+        <div class="common-title">常用清单</div>
       </div>
-      <div class="common-quickbtn askprice">
-        <a href="">
-          <i class="common-btn-img askprice-img"></i>
-          <div class="common-title">购物车</div>
-        </a>
+      <div @click="skipToCart" class="common-quickbtn askprice">
+        <i class="common-btn-img askprice-img"></i>
+        <div class="common-title">购物车</div>
       </div>
-      <div class="common-quickbtn usercenter">
-        <a href="">
-          <i class="common-btn-img usercenter-img"></i>
-          <div class="common-title">个人中心</div>
-        </a>
+      <div @click="skipToUser" class="common-quickbtn usercenter">
+        <i class="common-btn-img usercenter-img"></i>
+        <div class="common-title">个人中心</div>
       </div>    
     </div>
     <!--新闻-->
@@ -286,7 +278,20 @@ export default {
     // 跳转函数
     jumpToDetail(pid) {
       this.$router.push({path: 'productdetail', query: {pid: pid}});
-    }
+    },
+    // 跳转函数相关
+    skipToList() {
+      this.$router.push('/orderlist');
+    },
+    skipToCommon() {
+      this.$router.push('/commonlist');
+    },
+    skipToCart() {
+      this.$router.push('/cart');
+    },
+    skipToUser() {
+      this.$router.push('/usercenter');
+    },
   },
 }
 </script>
