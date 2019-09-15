@@ -63,14 +63,17 @@
                   <span class="price">{{ item.price.toFixed(2) }}</span>
                   <span class="unit">/{{ item.unit }}</span>
                 </div>
+                <div class="buy-btn">
+                  <img class="buy-btn-img" src="../assets/img/footer/cartselect.png" alt="加入购物车按钮">
+                </div>
                 <!--第一次购买-->
-                <div v-if="false" class="first-count"><i class="firstbuy-btn"></i></div>
+                <!-- <div v-if="false" class="first-count"><i class="firstbuy-btn"></i></div> -->
                 <!--非第一次购买-->
-                <div v-if="true" class="not-first" >
+                <!-- <div v-if="true" class="not-first" >
                   <span class="reduce common"></span>
                   <input class="input-count" type="number" value="1">
                   <span class="add common"></span>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -327,6 +330,10 @@ export default {
               justify-content: space-between;
               align-items: center;
               min-height: 55px;
+              .buy-btn-img {
+                width: 46px;
+                height: 46px;
+              }
               .price-item{
                 font-weight: bold;
                 color: #ff1f1f;

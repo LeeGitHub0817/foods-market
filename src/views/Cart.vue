@@ -30,165 +30,14 @@
                     <span class="add-btn btn-common"></span>
                   </div>
                 </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
+                <div class="goods-option flex-between-center">
+                  <div>
+                    <van-stepper v-model="value" />
                   </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
+                  <div>
+                    <span class="common-buy common-btn">移入常购</span>
+                    <span class="delete-btn common-btn">删除</span>
                   </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
-                  </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
-                  </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
-                  </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-item">
-            <div class="check-part">
-              <i class="check-icon selected"></i>
-            </div>
-            <div class="goods-part">
-              <div class="goods-img-box">
-                <img class="goods-img" src="/static/index/9.png" alt="商品图片">
-              </div>
-              <div class="goods-detail-box">
-                <div class="goods-title-box">超级美味八爪鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
-                <div class="goods-price-buy-box">
-                  <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
-                  <div class="buy-btn-box">
-                    <span class="reduce-btn btn-common"></span>
-                    <input class="input-content" type="text" value="1">
-                    <span class="add-btn btn-common"></span>
-                  </div>
-                </div>
-                <div class="goods-option">
-                  <span class="common-buy common-btn">移入常购</span>
-                  <span class="delete-btn common-btn">删除</span>
                 </div>
               </div>
             </div>
@@ -221,7 +70,8 @@
 export default {
   data: function(){
     return {
-      title: '购物车'
+      title: '购物车',
+      value: 1
     }
   }
 }
@@ -425,12 +275,12 @@ export default {
                 }
               }
               .goods-option{
-                text-align: right;
                 color: #999;
-                margin-top: 10px;
+                margin-top: 30px;
                 margin-bottom: 10px;
                 .common-btn{
                   margin-left: 20px;
+                  font-size: 26px;
                 }
               }
             }
