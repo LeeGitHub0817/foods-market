@@ -3,8 +3,8 @@
     <div class="cart-main-container">
       <header class="cart-head">购物车</header>
       <section class="cart-content">
-        <div class="store-name">
-          <i class="check-all-icon name-common selected"></i>
+        <div class="store-name flex-start-center">
+          <van-checkbox v-model="selectAll" checked-color="#1dce7e"></van-checkbox>
           <div class="name-container">
             <i class="store-icon name-common"></i>
             <span class="name-text name-common">小菜在线</span>
@@ -13,7 +13,7 @@
         <div class="cart-goods-list">
           <div class="cart-goods-item">
             <div class="check-part">
-              <i class="check-icon selected"></i>
+              <van-checkbox v-model="selectAll" checked-color="#1dce7e"></van-checkbox>
             </div>
             <div class="goods-part">
               <div class="goods-img-box">
@@ -21,7 +21,7 @@
               </div>
               <div class="goods-detail-box">
                 <div class="goods-title-box">冰鲜三文鱼冰鲜三文鱼</div>
-                <div class="goods-param-box">电风扇房价快速</div>
+                <!-- <div class="goods-param-box">电风扇房价快速</div> -->
                 <div class="goods-price-buy-box">
                   <p class="price"><span class="currency">￥</span><span class="price-num">58.98</span><span class="unit">/斤</span></p>
                   <div class="buy-btn-box">
@@ -44,10 +44,10 @@
           </div>
         </div>
       </section>
-      <footer class="cart-done">
-        <div class="count-part">
-          <div class="checkall-container">
-            <i class="check-all-icon selected"></i>
+      <footer class="cart-done flex-start-center">
+        <div class="count-part flex-start-center">
+          <div class="checkall-container flex-start-center">
+            <van-checkbox v-model="selectAll" checked-color="#1dce7e"></van-checkbox>
             <span class="text">全选</span>
           </div>
           <p class="total-price-container">
@@ -55,7 +55,7 @@
             <span class="total-price">￥789.15</span>
           </p>
         </div>
-        <div class="submit-part">
+        <div class="submit-part flex-all-center">
           <span class="submit-text">去结算（9999）</span>
         </div>
       </footer>
@@ -67,13 +67,26 @@
 </template>
 
 <script>
+import api from '../api/api.js';
+
 export default {
   data: function(){
     return {
       title: '购物车',
-      value: 1
+      value: 1,
+      selectAll: 1,
     }
-  }
+  },
+  created() {
+    api.getCartList().then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+    api.isLogin().then((res) => {
+      console.log(res);
+    })
+  },
 }
 </script>
 
@@ -123,7 +136,7 @@ export default {
           background-image: url("../assets/img/shop/check-ok.png");
         }
         .name-container{
-          display: inline-block;
+          margin-left: 20px;
           .store-icon{
             display: inline-block;
             vertical-align: middle;
@@ -279,7 +292,7 @@ export default {
                 margin-top: 30px;
                 margin-bottom: 10px;
                 .common-btn{
-                  margin-left: 20px;
+                  margin-left: 30px;
                   font-size: 26px;
                 }
               }
@@ -292,56 +305,33 @@ export default {
       position: fixed;
       width: 100%;
       height: 98px;
-      line-height: 98px;
       left: 0;
       bottom: 98px;
       font-size: 0;
       box-shadow: 0 -3px 13px 3px #f2f2f2;
       background-color: #fff;
       .count-part{
-        display: inline-block;
-        vertical-align: middle;
         width: 60%;
         box-sizing: border-box;
         padding-left: 32px;
         .checkall-container{
-          display: inline-block;
-          vertical-align: middle;
           .text{
             font-size: 26px;
-            vertical-align: middle;
-          }
-          .check-all-icon{
-            display: inline-block;
-            vertical-align: middle;
-            width: 36px;
-            height: 36px;
-            background-image: url("../assets/img/shop/check-no.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 36px 36px;
-            margin-right: 25px;
-            &.selected{
-              background-image: url("../assets/img/shop/check-ok.png");
-            }
           }
           .text{
-            margin-right: 10px;
+            margin: 0 10px;
           }
         }
         .total-price-container{
-          display: inline-block;
-          vertical-align: middle;
           font-size: 26px;
           .total-price{
             color: #FF1F1F;
           }
         }
       }
-      .submit-part{
-        display: inline-block;
-        vertical-align: middle;
+      .submit-part {
         width: 40%;
+        height: 98px;
         text-align: center;
         color: #fff;
         background-color: #1dce7e;

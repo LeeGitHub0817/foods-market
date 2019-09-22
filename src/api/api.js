@@ -85,5 +85,15 @@ export default {
                 reject(err);
             });
         });
+    },
+    // 获取购物车列表
+    getCartList() {
+        return new Promise((resolve, reject) => {
+            axios.get('/cart/cartlist').then((res) => {
+                resolve(res);
+            }).catch((err) => {
+                reject(err);
+            })
+        });
     }
 }

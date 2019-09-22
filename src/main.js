@@ -7,7 +7,7 @@ import FootPart from "./components/Foot.vue";
 import HeadCom from "./components/head/Head.vue";
 // 引入vant ui组件
 import { Icon, Stepper, Field, Cell, CellGroup, Toast, Button,
-  Switch, Popup, Area, AddressList, RadioGroup, Radio } from "vant";
+  Switch, Popup, Area, AddressList, RadioGroup, Radio, Checkbox, CheckboxGroup  } from "vant";
 
 Vue.config.productionTip = false
 
@@ -16,7 +16,8 @@ Vue.component("foot-part", FootPart);
 Vue.component('head-com', HeadCom);
 // 使用vant组件
 Vue.use(Icon).use(Stepper).use(Field).use(Cell).use(CellGroup).use(Toast).use(Button)
-  .use(Switch).use(Popup).use(Area).use(AddressList).use(RadioGroup).use(Radio);
+  .use(Switch).use(Popup).use(Area).use(AddressList).use(RadioGroup).use(Radio).use(Checkbox)
+  .use(CheckboxGroup );
 
 // 引入组件
 import loaddingPop from './components/loading/load.js';
