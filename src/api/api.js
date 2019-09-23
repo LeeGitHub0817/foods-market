@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = 'http://192.168.1.108:3000';
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true; // 允许跨域携带cookie
 
 // 封装好的接口方法
 export default {

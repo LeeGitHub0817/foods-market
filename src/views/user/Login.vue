@@ -35,7 +35,7 @@ import api from "../../api/api";
 import { Toast } from 'vant';
 
 export default {
-  data: function(){
+  data: function() {
     return {
       //提交的表单数据
       formData: {
@@ -46,14 +46,18 @@ export default {
   },
   methods: {
     //提交信息
-    submit(){
+    submit() {
       if(/^1[356789]\d{9}$/.test(this.formData.telNumber) == false){
         Toast('请输入正确的手机号码！');
         return;
       }
       api.userLogin(this.formData).then((res) => {
-        if(res.data.data.status == true){
-          this.$router.push("/userCenter");
+        if(res.data.data.status == true) {
+          if(this.$route.query.redirect) {
+            this.$router.push(this.$route.query.redirect);
+          }else {
+            this.$router.push("/userCenter");
+          }
         }else{
           Toast(res.data.data.msg);
         }
