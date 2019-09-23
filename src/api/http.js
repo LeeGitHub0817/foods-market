@@ -11,15 +11,16 @@ instance.interceptors.request.use((config) => {
 
   return config;
 }, (error) => {
-  Promise.error(error);
+  return Promise.error(error);
 });
 
 instance.interceptors.response.use((res) => {
-  res.status == 200 ? Promise.resolve(res) : Promise.reject(res);
+  res => res.status == 200 ? Promise.resolve(res) : Promise.reject(res);
+  return res;
 }, (error) => {
   // 错误信息相关处理
 
-  Promise.reject(error);
+  return Promise.reject(error);
 });
 
 export default instance;
