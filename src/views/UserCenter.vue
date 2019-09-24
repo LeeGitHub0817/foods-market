@@ -6,7 +6,7 @@
         <div class="user-type">
           <div class="avatar"><img src="../assets/img/user/default_avatar.jpg" alt="头像"></div>
           <div class="name-con">
-            <h1 class="name">联合国际</h1>
+            <h1 class="name">小菜在线</h1>
             <div class="type">合约客户</div>
           </div>
           <!-- <div class="account-set">
